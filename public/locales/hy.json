@@ -1,0 +1,24 @@
+{
+    "about_us": "Մեր մասին",
+    "our_publications": "Մեր Հրապարակումները",
+    "announcements": "Հայտարարություններ",
+    "contact_us": "Կապ մեզ հետ",
+    "write_now": "Գրել հիմա",
+    
+    "validation": {
+        "required": "Պարտադիր է",
+        "minLength": "Պետք է լինի առնվազն {{min}} նիշ",
+        "maxLength": "Պետք է լինի առավելագույնը {{max}} նիշ",
+        "email": "Անվավեր էլ. փոստ",
+        "passwordMismatch": "Գաղտնաբառերը պետք է համընկնեն",
+        "phoneFormat": "Պետք է սկսվի +374-ով և ունենա 8 թվանշան",
+        "ageRestriction": "Պետք է լինել առնվազն 18 տարեկան",
+        "invalidGender": "Անվավեր սեռ",
+        "universityRequired": "Համալսարանը պարտադիր է"
+    },
+
+    "form": {
+        "email": "Էլ. Փոստ",
+        "full_name": "Անուն Ազգանուն"
+    }
+}

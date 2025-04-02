@@ -1,0 +1,18 @@
+{
+    "validation": {
+    "required": "Required",
+    "minLength": "Must be at least {{min}} characters",
+    "maxLength": "Must be at most {{max}} characters",
+    "email": "Invalid email",
+    "passwordMismatch": "Passwords must match",
+    "phoneFormat": "Must start with +374 and have 8 digits",
+    "ageRestriction": "Must be at least 18",
+    "invalidGender": "Invalid gender",
+    "universityRequired": "University is required"
+  },
+  "form": {
+    "email": "Email",
+    "full_name": "Full Name"
+    
+  }
+}

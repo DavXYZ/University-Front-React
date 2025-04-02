@@ -1,0 +1,176 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+
+.heading {
+    font-size: 40px;
+    font-weight: 600;
+    color: #2c444e;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.form_container {
+    display: flex;
+    margin: 45px auto 20px;
+    gap: 30px;
+    width: 750px;
+    height: 450px;
+    background-color: white;
+}
+
+.left {
+    flex: 1;
+    overflow: hidden;
+    position: relative;
+    border-top-left-radius: 50px;
+    border-bottom-left-radius: 50px;
+}
+
+.img {
+    width: 160%;
+    position: absolute;
+    left: -150px;
+    top: -50px;
+}
+
+.right {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding-right: 40px;
+}
+
+.form_heading {
+    font-size: 25px;
+    font-weight: 400;
+    color: #2c444e;
+    margin-bottom: 30px;
+}
+
+label {
+    font-size: 14px;
+    font-weight: 500;
+    color: #2c444e;
+    display: block;
+    margin-bottom: 5px;
+}
+
+.input {
+    width: 320px;
+    height: 35px;
+    padding: 8px;
+    margin: 5px 0 15px;
+    outline: none;
+    border: 1px solid #ccc;
+    background-color: #fbfbfb;
+    border-radius: 6px;
+    font-size: 13px;
+}
+
+.btn {
+    font-size: 18px;
+    font-weight: 500;
+    width: 320px;
+    padding: 12px 20px;
+    color: white;
+    background-color: #09005f;
+    box-shadow: 0px 4px 8px rgba(5, 0, 46, 0.5);
+    border-radius: 8px;
+    margin: 20px 0;
+    outline: none;
+    border: none;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+}
+
+.btn:hover {
+    background-color: #050040;
+}
+
+.signUp {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    background-color: white;
+    border: 1px solid #09005f;
+    border-radius: 8px;
+    width: 320px;
+    padding: 12px 20px;
+    font-weight: bold;
+    text-align: center;
+    color: #09005f;
+    transition: all 0.3s ease-in-out;
+}
+
+.signUp:hover {
+    background-color: #09005f;
+    color: white;
+}
+
+.forgotPassword a {
+    color: #1400c4;
+    text-decoration: none;
+}
+
+.text {
+    font-size: 14px;
+    color: #2c444e;
+    margin: 5px 0;
+    padding: 0;
+}
+
+.text > a {
+    font-size: 16px;
+    font-weight: 500;
+    color: #ffc801;
+}
+
+.rememberAndForgot {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.orContainer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    margin: 20px 0;
+}
+
+.orText {
+    font-size: 14px;
+    color: #2c444e;
+    margin: 0 10px;
+    font-weight: 500;
+}
+
+.line {
+    flex-grow: 1;
+    height: 1px;
+    background-color: #ccc;
+}
+
+.passwordWrapper {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.eyeButton {
+    position: absolute;
+    right: 10px;
+    background: none;
+    border: none;
+    cursor: pointer;
+}

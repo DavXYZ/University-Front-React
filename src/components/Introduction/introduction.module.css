@@ -1,0 +1,217 @@
+.howToContainer {
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 0 120px;
+    width: 1440px;
+    height: 500px;
+    flex: none;
+    order: 3;
+    flex-grow: 0;
+}
+
+.howToWriteContent {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 0;
+    gap: 140px;
+    width: 1200px;
+    height: 436px;
+    flex: none;
+    order: 0;
+    flex-grow: 1;
+}
+
+.howToTextContent {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 48px 0;
+    gap: 24px;
+    width: 638px;
+    height: 366px;
+    flex: none;
+    order: 0;
+    flex-grow: 0;
+}
+
+.howToTitle {
+    width: 418px;
+    height: 96px;
+    font-family: 'Montserrat arm';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 32px;
+    line-height: 150%;
+    display: flex;
+    align-items: flex-end;
+    color: #2D2D2D;
+    margin: 0;
+}
+
+.howToDescription {
+    width: 654px;
+    height: 150px;
+    font-family: 'Montserrat arm';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 150%;
+    display: flex;
+    align-items: flex-end;
+    color: #2D2D2D;
+    margin: 0;
+}
+
+.howToImageContainer {
+    box-sizing: border-box;
+    width: 436px;
+    height: 436px;
+    border-radius: 280px;
+    position: relative;
+    overflow: hidden;
+    flex: none;
+    order: 1;
+    flex-grow: 0;
+}
+
+.howToImage {
+    position: absolute;
+    width: 467px;
+    height: 467px;
+    left: -30px;
+    top: -17.45px;
+    background: url(../assets/people.png);
+}
+
+/**********************************/
+
+.goalContainer {
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 56px 15px;
+    gap: 8px;
+    width: 1440px;
+    height: 760px;
+    background: #F2F2F2;
+    flex: none;
+    order: 4;
+    flex-grow: 0;
+}
+
+.goalWrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 0px;
+    gap: 32px;
+    width: 1200px;
+    height: 648px;
+    flex: none;
+}
+
+.goalTitle {
+    width: 1200px;
+    height: 48px;
+    font-family: 'Montserrat arm';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 32px;
+    line-height: 150%;
+    display: flex;
+    align-items: flex-end;
+    color: #2D2D2D;
+}
+
+.goalContent {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 0px;
+    gap: 20px;
+    width: 1200px;
+    height: 568px;
+}
+
+.goalRow {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0px;
+    gap: 16px;
+    width: 1200px;
+    height: 176px;
+}
+
+.goalCard {
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0px;
+    width: 590px;
+    height: 176px;
+    background: #FFFFFF;
+}
+
+.goalCardContent {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 8px 24px;
+    gap: 8px;
+    width: 396px;
+    height: 166px;
+}
+
+.goalCardTitle {
+    width: 238px;
+    height: 48px;
+    font-family: 'Montserrat arm';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 150%;
+    display: flex;
+    align-items: flex-end;
+    color: #2D2D2D;
+    margin: 0;
+}
+
+.goalCardDescription {
+    width: 348px;
+    height: 84px;
+    font-family: 'Montserrat arm';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 150%;
+    display: flex;
+    align-items: flex-end;
+    color: #555050;
+    margin: 0;
+}
+
+.goalCardImage {
+    box-sizing: border-box;
+    width: 194px;
+    height: 176px;
+    position: relative;
+    overflow: hidden;
+}
+
+.goalCardImage img {
+    position: absolute;
+    width: 194px;
+    height: 194px;
+    left: 0px;
+    top: -17px;
+}

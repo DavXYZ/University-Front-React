@@ -1,0 +1,805 @@
+.image-title-container {
+    width: 1440px;
+    height: 235px;
+    background: url(../assets/hand2.png);
+    flex: none;
+    order: 4;
+    flex-grow: 0;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: block;
+}
+
+/***************************/
+
+.presentation-progress-container {
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: flex-start;
+    padding: 0 80px;
+    width: 1440px;
+    height: 56px;
+    border: 1px solid #EEEEEE;
+    position: relative;
+    isolation: isolate;
+}
+
+.presentation-progress-inner {
+    position: absolute;
+    left: 7px;
+    top: 16px;
+    display: flex;
+    gap: 16px;
+    align-items: center;
+    width: 286px;
+    height: 24px;
+}
+
+.presentation-progress-icon {
+    position: relative;
+    width: 24px;
+    height: 24px;
+}
+
+.presentation-progress-bounding-box {
+    position: absolute;
+    background: url(../assets/contract_edit.png);
+    width: 100%;
+    height: 100%;
+}
+
+.presentation-progress-icon-shape {
+    position: absolute;
+    left: 1.05%;
+    right: 91.96%;
+    top: 8.33%;
+    bottom: 8.33%;
+    background: #2D2D2D;
+}
+
+.presentation-progress-text {
+    font-family: 'Montserrat arm';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 20px;
+    color: #2D2D2D;
+    width: 246px;
+    height: 20px;
+}
+
+/***********************************/
+
+.titleNavigation {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 0px;
+    gap: 16px;
+    width: 300px;
+    height: 240px;
+    background: #F2F2F2;
+    position: relative;
+}
+
+.titleNavigationItem {
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 0px 15px;
+    width: 300px;
+    height: 48px;
+    background: #F2F2F2;
+}
+
+.titleNavigationItemActive {
+    border-left: 4px solid #2D2D2D;
+}
+
+.titleNavigationText {
+    font-family: 'Montserrat arm';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 17px;
+    color: #2D2D2D;
+    width: 209px;
+}
+
+.titleNavigationTextActive {
+    font-weight: 500;
+}
+
+.titleNavigationSteps {
+    position: absolute;
+    width: 24px;
+    height: 216px;
+    right: 16px;
+    top: 14px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 40px;
+}
+
+.titleNavigationStepsLine {
+    position: absolute;
+    width: 0px;
+    height: 174.5px;
+    border: 2px dashed #566780;
+    top: 26px;
+}
+
+.titleNavigationStepCircle {
+    box-sizing: border-box;
+    width: 24px;
+    height: 24px;
+    background: #FFFFFF;
+    border-radius: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1;
+}
+
+.titleNavigationStepNumber {
+    font-family: 'Montagu Slab';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 13px;
+    line-height: 17px;
+}
+
+.titleNavigationStep1 {
+    border: 1px solid #0C91D3;
+    color: #0C91D3;
+}
+
+.titleNavigationStep2 {
+    border: 1px solid #566780;
+    color: #566780;
+}
+
+.titleNavigationStep3,
+.titleNavigationStep4 {
+    border: 1px solid #919BAC;
+    color: #919BAC;
+}
+
+/***************************/
+
+.mainTitleNavigation {
+    box-sizing: border-box;
+
+    /* Auto layout */
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    padding: 0px 0px 56px;
+    gap: 148px;
+    width: 1440px;
+    height: 2258px;
+
+    background: #FFFFFF;
+
+    /* Inside auto layout */
+    flex: none;
+    order: 8;
+    flex-grow: 0;
+}
+
+/******************************/
+
+/* StepComponent.css */
+.step-description {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 8px 0px;
+    width: 872px;
+    height: 70px;
+    flex: none;
+    order: 0;
+    align-self: stretch;
+    flex-grow: 0;
+}
+
+.step-descriptionText {
+    width: 872px;
+    height: 54px;
+    font-family: 'Montserrat arm';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 150%;
+    color: #191919;
+    flex: none;
+    order: 0;
+    flex-grow: 0;
+}
+.step-menu {
+    box-sizing: border-box;
+    /* Auto layout */
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 8px 0;
+    gap: 32px;
+
+    width: 872px;
+    height: auto;
+    background: #FFFFFF;
+
+    /* Inside auto layout */
+    flex: none;
+    order: 1;
+    flex-grow: 0;
+}
+
+/* Article Data Container */
+.articleData {
+    /* Auto layout */
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 0;
+    gap: 8px;
+    width: 872px;
+    height: 89px;
+    flex: none;
+    flex-grow: 0;
+}
+
+/* Heading */
+.articleData-heading {
+    width: 872px;
+    height: 39px;
+    font-family: 'Montserrat arm';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 26px;
+    line-height: 150%;
+    color: #191919;
+    flex: none;
+    order: 0;
+    align-self: stretch;
+    flex-grow: 0;
+}
+
+/* Description Text */
+.articleData-description {
+    width: 724px;
+    height: 42px;
+    font-family: 'Montserrat arm';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 150%;
+    color: #191919;
+    flex: none;
+    order: 1;
+    flex-grow: 0;
+}
+
+/************************/
+
+/* Main Guide Container */
+.articleGuide {
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 0;
+    overflow: hidden;
+    gap: 56px;
+    width: 744px;
+    height: 786px;
+    background: #FFFFFF;
+    position: relative;
+}
+
+/* Upload Section */
+.articleGuide-upload {
+    box-sizing: border-box;
+    width: 744px;
+    height: 783px;
+    background: #F7FAFF;
+    border: 1px solid #5F8FEE;
+    border-radius: 8px;
+    position: relative;
+}
+
+/* Header Section */
+.articleGuide-header {
+    position: absolute;
+    width: 872px;
+    height: 89px;
+    flex: none;
+    order: 1;
+}
+
+/* Step Title */
+.articleGuide-stepTitle {
+    width: 872px;
+    height: 39px;
+    font-family: 'Montserrat arm';
+    font-size: 26px;
+    line-height: 150%;
+    color: #191919;
+    margin-bottom: 8px;
+}
+
+/* Instructions Text */
+.articleGuide-instructions {
+    width: 724px;
+    height: 42px;
+    font-family: 'Montserrat arm';
+    font-size: 14px;
+    line-height: 150%;
+    color: #191919;
+}
+
+/* Upload Prompt */
+.articleGuide-uploadPrompt {
+    position: absolute;
+    width: 381px;
+    left: 96px;
+    top: 110px;
+    font-family: 'Montserrat arm';
+    font-size: 20px;
+    color: #000000;
+}
+
+/* File Requirements */
+.articleGuide-fileRequirements {
+    position: absolute;
+    width: 368px;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 154px;
+    font-family: 'Montserrat arm';
+    font-size: 14px;
+    color: #707386;
+}
+
+/* Detailed Guidelines */
+.articleGuide-guidelines {
+    position: absolute;
+    width: 645px;
+    height: 672px;
+    left: 50%;
+    top: 50%;
+    overflow: hidden;
+    transform: translate(-50%, -50%);
+    font-family: 'Montserrat arm';
+    font-size: 14px;
+    line-height: 150%;
+    color: #000000;
+    white-space: pre-wrap;
+}
+
+/* Helper Elements */
+.articleGuide-helper {
+    position: absolute;
+    left: 283px;
+    top: 16px;
+    font-family: 'Montserrat arm';
+    font-weight: 500;
+    font-size: 16px;
+    color: #000000;
+}
+
+/* Error State */
+.articleGuide-error {
+    position: absolute;
+    right: 16px;
+    top: 16px;
+    width: 24px;
+    height: 24px;
+}
+
+/* Hidden Elements */
+.articleGuide--hidden {
+    visibility: hidden;
+    display: none;
+}
+
+/****************************/
+.stepIsAuthor {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    width: 473px;
+}
+
+.stepIsAuthor-question {
+    width: 100%;
+    font-family: 'Montserrat arm', sans-serif;
+    /* Added fallback font */
+    font-size: 14px;
+    line-height: 1.5;
+    /* Simplified line-height */
+    color: #191919;
+    margin: 0;
+    /* Reset default margin */
+}
+
+.stepIsAuthor-checkboxGroup {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.stepIsAuthor-checkbox {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    height: 24px;
+    cursor: pointer;
+    /* Added for better UX */
+}
+
+.stepIsAuthor-checkboxBounding {
+    position: relative;
+    width: 24px;
+    height: 24px;
+    flex-shrink: 0;
+}
+
+.stepIsAuthor-checkIcon {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    /* Circular checkbox */
+    border: 1px solid #B9BCCB;
+    /* Consistent border color */
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    /* Perfect centering */
+    transition: background-color 0.2s ease, border-color 0.2s ease;
+    /* Smooth transition */
+}
+
+.stepIsAuthor-checkIcon.active {
+    background-color: #004DE5;
+    /* Active state background */
+    border-color: #004DE5;
+    /* Active state border */
+}
+
+.stepIsAuthor-checkboxLabel {
+    font-family: 'Montserrat arm', sans-serif;
+    /* Added fallback font */
+    font-size: 12px;
+    line-height: 1.5;
+    /* Simplified line-height */
+    color: #191919;
+    margin: 0;
+    /* Reset default margin */
+}
+
+/********************************/
+
+.stepContent {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    width: 873px;
+}
+
+.stepContent-title {
+    width: 100%;
+    font-family: 'Montserrat arm', sans-serif;
+    font-size: 20px;
+    line-height: 1.5;
+    color: #191919;
+    margin: 0;
+}
+
+.stepContent-description {
+    width: 724px;
+    font-family: 'Montserrat arm', sans-serif;
+    font-size: 14px;
+    line-height: 1.5;
+    color: #191919;
+    margin: 0;
+}
+
+.stepContent-selectContainer {
+    box-sizing: border-box;
+    width: 724px;
+    height: auto;
+    background: #FFFFFF;
+    border: 1px solid #F3F3F7;
+    border-radius: 8px;
+    padding: 8px;
+}
+
+.stepContent-select {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: 24px;
+}
+
+.stepContent-selectText {
+    font-family: 'Montserrat arm', sans-serif;
+    font-size: 14px;
+    line-height: 1.5;
+    color: #808080;
+}
+
+.stepContent-chevron {
+    width: 24px;
+    height: 24px;
+    transform: rotate(90deg);
+    position: relative;
+}
+
+.stepContent-chevron::after {
+    content: '';
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    width: 6px;
+    height: 6px;
+    border: solid #585858;
+    border-width: 0 2px 2px 0;
+    transform: translate(-50%, -50%) rotate(-45deg);
+}
+
+/************************/
+
+/* StepTitleWrite.css */
+.stepTitleWrite {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    width: 873px;
+}
+
+.stepTitleWrite-title {
+    width: 100%;
+    font-family: 'Montserrat arm', sans-serif;
+    font-size: 20px;
+    line-height: 1.5;
+    color: #2D2D2D;
+    margin: 0;
+}
+
+.stepTitleWrite-instruction {
+    width: 724px;
+    font-family: 'Montserrat arm', sans-serif;
+    font-size: 14px;
+    line-height: 1.5;
+    color: #2D2D2D;
+    margin: 0;
+}
+
+.stepTitleWrite-inputContainer {
+    box-sizing: border-box;
+    width: 812px;
+    height: 108px;
+    background: #FFFFFF;
+    border: 1px solid #DDDDDD;
+    border-radius: 8px;
+}
+
+.stepTitleWrite-inputHeader {
+    box-sizing: border-box;
+    width: 100%;
+    height: 50px;
+    overflow: hidden;
+    background: #F5F5F5;
+    border: 1px solid #DDDDDD;
+    border-radius: 8px 8px 0px 0px;
+    padding: 24px 8px;
+    display: flex;
+    align-items: center;
+}
+
+.stepTitleWrite-icon {
+    width: 108px;
+    height: 14.13px;
+    background: url('../assets/articleText.png') no-repeat center;
+    background-size: contain;
+    flex-shrink: 0;
+}
+
+/****************************/
+
+/* Main Container for Both Components */
+.stepLanguageAndData {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 0px;
+    gap: 24px;
+    width: 401px;
+    height: 90px;
+    flex: none;
+    order: 3;
+    flex-grow: 0;
+}
+
+/* Language Component */
+.stepLanguage {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 0px;
+    gap: 8px;
+    width: 148px;
+    height: 90px;
+    flex: none;
+    order: 0;
+    flex-grow: 0;
+}
+
+/* Language Label */
+.stepLanguage-label {
+    width: 148px;
+    height: 42px;
+    font-family: 'Montserrat arm', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 150%;
+    color: #191919;
+    flex: none;
+    order: 0;
+    align-self: stretch;
+    flex-grow: 0;
+}
+
+/* Language Dropdown */
+.stepLanguage-dropdown {
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 8px;
+    width: 121px;
+    height: 40px;
+    overflow: hidden;
+    background: #FFFFFF;
+    border: 1px solid #F3F3F7;
+    border-radius: 8px;
+    flex: none;
+    order: 1;
+    align-self: stretch;
+    flex-grow: 0;
+}
+
+/* Dropdown Content (Language Text + Chevron) */
+.stepLanguage-dropdownContent {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0px;
+    gap: 14px;
+    width: 105px;
+    height: 24px;
+    flex: none;
+    order: 0;
+    flex-grow: 0;
+}
+
+/* Language Text Inside Dropdown */
+.stepLanguage-dropdownText {
+    width: 72px;
+    height: 21px;
+    font-family: 'Montserrat arm', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 150%;
+    color: #191919;
+    flex: none;
+    order: 0;
+    flex-grow: 0;
+}
+
+/* Chevron Icon */
+.stepLanguage-chevron {
+    width: 24px;
+    height: 24px;
+    transform: rotate(90deg);
+    flex: none;
+    order: 1;
+    flex-grow: 0;
+}
+
+/* Date Component */
+.stepDate {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 0px;
+    gap: 8px;
+    width: 229px;
+    height: 90px;
+    flex: none;
+    order: 1;
+    flex-grow: 0;
+}
+
+/* Date Label */
+.stepDate-label {
+    width: 229px;
+    height: 42px;
+    font-family: 'Montserrat arm', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 150%;
+    color: #191919;
+    flex: none;
+    order: 0;
+    align-self: stretch;
+    flex-grow: 0;
+}
+
+/* Date Input */
+.stepDate-input {
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 8px;
+    overflow: hidden;
+    width: 157px;
+    height: 40px;
+    background: #FFFFFF;
+    border: 1px solid #F3F3F7;
+    border-radius: 8px;
+    flex: none;
+    order: 1;
+    align-self: stretch;
+    flex-grow: 0;
+}
+
+.stepDate-input img {
+    width: 20px;
+    height: 24px;
+    background-size: contain;
+    flex: none;
+    order: 1;
+    flex-grow: 0;
+}
+
+/* Date Text Inside Input */
+.stepDate-inputText {
+    width: 103px;
+    height: 21px;
+    font-family: 'Montserrat arm', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 150%;
+    color: #191919;
+    flex: none;
+    order: 0;
+    flex-grow: 0;
+}
+
+.stepLanguage-chevron::after {
+    content: '';
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    width: 6px;
+    height: 6px;
+    border: solid #585858;
+    border-width: 0 2px 2px 0;
+    transform: translate(-50%, -50%) rotate(-45deg);
+}

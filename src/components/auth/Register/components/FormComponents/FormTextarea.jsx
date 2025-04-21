@@ -1,6 +1,6 @@
 import React from 'react';
 import { Field, ErrorMessage, useField } from 'formik';
-import s from '../../Register.module.css';
+import s from './FormTextarea.module.css';
 import ValidationError from '../../../../../validation/components/ValidationError';
 
 const FormTextarea = ({ name, label, placeholder }) => {

@@ -42,9 +42,10 @@ export const authApi = {
         }
     },
 
-    async login(emailOrUsername, password) {
+    async login(email, password,remember_me) {
+        debugger
         try {
-            const response = await instance.post('auth/login', { emailOrUsername, password }, { withCredentials: true });
+            const response = await instance.post('auth/login', { email, password,remember_me }, { withCredentials: true });
             return response.data;
         } catch (error) {
             console.error("Login error:", error);
@@ -52,14 +53,20 @@ export const authApi = {
         }
     },
 
-    async register(firstName, lastName, email, username, password) {
-        try {
-            const response = await instance.post('auth/register', { firstName, lastName, email, username, password });
-            return response.data;
-        } catch (error) {
-            console.error("Error during registration:", error);
-            throw error;
-        }
+    // async register(firstName, lastName, email, username, password) {
+    //     try {
+    //         const response = await instance.post('auth/register', { firstName, lastName, email, username, password });
+    //         return response.data;
+    //     } catch (error) {
+    //         console.error("Error during registration:", error);
+    //         throw error;
+    //     }
+    // },
+
+    register: async (formData) => {
+        debugger
+        const response = await instance.post('auth/register', formData);
+        return response.data;
     },
 
     async logout() {
@@ -111,5 +118,36 @@ export const googleAuthApi = {
             console.error("Google authentication error:", error);
             throw error;
         }
+    }
+};
+
+
+export const translationApi = {
+    async translateDynamic(text, targetLanguage) {
+        try {
+            const response = await instance.post('/translate', {
+                text,
+                targetLanguage
+            });
+            debugger
+            return response.data.translation || text; // Fallback to original if translation fails
+        } catch (error) {
+            console.error('Translation error:', error);
+            return text; // Return original text if API fails
+        }
+    },
+
+    async translateName(type, name, i18n) {
+        // First check static translations
+        // const staticTranslation = i18n.t(`${type}.${name}`);
+        // if (staticTranslation && staticTranslation !== name) return staticTranslation;
+        
+        // If no static translation, try dynamic translation
+        if (i18n.language !== 'en') {
+            debugger // Don't translate if already English
+            return await this.translateDynamic(name, i18n.language);
+        }
+        
+        return name;
     }
 };

@@ -1,0 +1,46 @@
+/* DropDownButton.module.css */
+
+/* Wrapper */
+.dropdownWrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    position: relative;
+    width: 100%;
+  }
+  
+  /* The toggle button */
+  .toggleButton {
+    background-color: #f0f0f0;
+    border: 1px solid #ccc;
+    color: #333;
+    padding: 10px 15px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 14px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    transition: background 0.2s ease;
+  }
+  
+  .toggleButton:hover {
+    background-color: #e8e8e8;
+  }
+  
+  /* Dropdown content */
+  .dropdownContent {
+    margin-top: 8px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    background-color: white;
+    border-radius: 6px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+    width: 100%;
+    z-index: 10;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }
+  

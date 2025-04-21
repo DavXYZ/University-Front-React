@@ -85,3 +85,10 @@
   .suggestionsList::-webkit-scrollbar-thumb:hover {
     background: #a8a8a8;
   }
+
+  .active {
+    background-color: #f0f0f0;
+    font-weight: bold;
+    cursor: pointer;
+  }
+  

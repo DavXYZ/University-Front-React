@@ -11,6 +11,8 @@ import RoleChooseContainer from "./components/auth/Register/components/RoleChoos
 import RegisterContainer from "./components/auth/Register";
 import ForgotPasswordPage from "./components/pages/ForgotPasswordPage";
 import Login from "./components/auth/Login/Login";
+import ResetPassword from "./components/auth/ResetPassword/ResetPassword";
+import ProfileContainer from "./components/profile/ProfileContainer";
 
 function App() {
   return (
@@ -27,6 +29,8 @@ function App() {
       <Route path="/register" element={<RegisterContainer />} />
       <Route path="/role-register" element={<RoleChooseContainer />} />
       <Route path="/forgot-password" element={<ForgotPasswordPage />} />
+      <Route path="/reset-password/*" element={<ResetPassword />} />
+      <Route path="/profile/*" element={<ProfileContainer />} />
     </Routes>
   );
 }

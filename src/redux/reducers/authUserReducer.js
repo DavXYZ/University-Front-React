@@ -14,6 +14,7 @@ const initialState = {
 };
 
 const authUserReducer = (state = initialState, action) => {
+
     switch (action.type) {
         case SET_AUTH_USER:
             return { ...state, ...action.data };
@@ -81,9 +82,9 @@ export const authenticate = () => async (dispatch) => {
 // Updated login action to work with Formik
 // src/redux/reducers/authAdminReducer.js
 
-export const login = (email, password, setErrors) => async (dispatch) => {
+export const login = (email, password,remember_me, setErrors) => async (dispatch) => {
     try {
-        const res = await authApi.login(email, password);
+        const res = await authApi.login(email, password,remember_me);
         if (res.resultCode === 0) {
             dispatch(authenticate()); // Re-authenticate after login
         } else {
@@ -99,12 +100,12 @@ export const login = (email, password, setErrors) => async (dispatch) => {
 };
 
 export const register = (formData, setErrors, navigate) => (dispatch) => {
-    const { full_name, email, password,confirm_password } = formData;
-    authApi.register( full_name, email, password,confirm_password)
+    authApi.register(formData)
         .then((res) => {
             if (res.resultCode === 0) {
                 dispatch(setAuthError(""));  // Clear errors on successful registration
-                dispatch(setAuthUserData(null, "Registration successful. Please log in.", false));
+                const role = formData.get('role');
+                dispatch(setAuthUserData(null, null, role, "Registration successful. Please log in.", false));
                 navigate('/login');  // Redirect to login page after successful registration
             } else {
                 const errorMessage = res.message || "Registration failed";

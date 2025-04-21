@@ -4,7 +4,7 @@ import { Formik, Form, Field, ErrorMessage } from "formik";
 import * as Yup from "yup";
 import { connect } from "react-redux";
 // import { login } from "../../../redux/reducers/authAdminReducer";
-import loginPng from "../assets/login.png";
+import loginPng from "../../assets/login.png";
 import { Navigate, Link } from "react-router";
 import Header from "../../common/Header";
 import NavBar from "../../common/NavBar";
@@ -19,9 +19,9 @@ import GoogleAuthWrapper from "../GoogleLogin/GoogleOAuthWrapper";
 
 // Validation schema using Yup
 const validationSchema = Yup.object({
-  emailOrUsername: Yup.string().required("Username or Email is required"),
+  email: Yup.string().required("Username or Email is required"),
   password: Yup.string().required("Password is required"),
-  rememberMe: Yup.boolean(),
+  remember_me: Yup.boolean(),
 });
 
 const LoginForm = ({ onSubmit }) => {
@@ -31,14 +31,14 @@ const LoginForm = ({ onSubmit }) => {
       <Header />
       <NavBar />
       <Formik
-        initialValues={{ emailOrUsername: "", password: "" }}
+        initialValues={{ email: "", password: "" }}
         validationSchema={validationSchema}
         onSubmit={(values, { setSubmitting, setErrors }) => {
           onSubmit(values, setErrors); // Pass setErrors to login action
           setSubmitting(false);
         }}
       >
-        {({ isSubmitting}) => (
+        {({ isSubmitting }) => (
           <Form className={s.container}>
             <div className={s.form_container}>
               <div className={s.left}>
@@ -47,15 +47,15 @@ const LoginForm = ({ onSubmit }) => {
               <div className={s.right}>
                 <h2 className={s.form_heading}>Members Log in</h2>
                 <div className={s.emailInput}>
-                  <label htmlFor="emailOrUsername">Email</label>
+                  <label htmlFor="email">Email</label>
                   <Field
-                    id="emailOrUsername"
-                    name="emailOrUsername"
+                    id="email"
+                    name="email"
                     placeholder="info@polytechnic.am"
                     className={s.input}
                   />
                   <ErrorMessage
-                    name="emailOrUsername"
+                    name="email"
                     component="div"
                     className={s.formSummaryError}
                   />
@@ -87,12 +87,12 @@ const LoginForm = ({ onSubmit }) => {
                 </div>
 
                 <div className={s.rememberAndForgot}>
-                  <div className={s.rememberMeContainer}>
-                    <label htmlFor="rememberMe">
+                  <div className={s.remember_meContainer}>
+                    <label htmlFor="remember_me">
                       <Field
                         type="checkbox"
-                        id="rememberMe"
-                        name="rememberMe"
+                        id="remember_me"
+                        name="remember_me"
                       />{" "}
                       Remember Me
                     </label>
@@ -112,10 +112,10 @@ const LoginForm = ({ onSubmit }) => {
                   <span className={s.line}></span>
                 </div>
 
-                <div>{ <GoogleAuthWrapper /> }</div>
-                
+                <div>{<GoogleAuthWrapper />}</div>
+
                 <Link to="/role-register" className={s.signUp}>Sign up</Link>
-                
+
               </div>
             </div>
           </Form>
@@ -128,10 +128,9 @@ const LoginForm = ({ onSubmit }) => {
 
 const Login = (props) => {
   const onSubmit = (formData, setErrors) => {
-    props.login(formData.emailOrUsername, formData.password, setErrors); // Pass setErrors to login
+    props.login(formData.email, formData.password,formData.remember_me ,setErrors);
   };
 
-  // If the user is already authenticated, navigate to the home page
   if (props.isAuth) {
     return <Navigate to={"/"} />;
   }
@@ -140,8 +139,8 @@ const Login = (props) => {
 };
 
 const mapStateToProps = (state) => ({
-    isAuth: state.auth.isAuth,
-    message: state.auth.message,
+  isAuth: state.auth.isAuth,
+  message: state.auth.message,
 });
 
-export default connect(mapStateToProps, {login})(Login);
+export default connect(mapStateToProps, { login })(Login);

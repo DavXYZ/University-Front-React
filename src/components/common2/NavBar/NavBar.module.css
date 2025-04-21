@@ -1,0 +1,156 @@
+/* Common2.module.css */
+
+/* Base styles for the whole sidebar */
+.navBar {
+    box-sizing: border-box;
+    grid-area: n;
+    /* Auto layout */
+
+    flex-direction: column;
+    align-items: center;
+    padding: 0;
+    gap: 40px;
+  
+    margin: 0 auto;
+    width: 280px;
+    height: 930px;
+    overflow-y: scroll;
+  
+    background: #FAFAFA;
+  
+    flex: none;
+    order: 0;
+    flex-grow: 0;
+  }
+  
+  /* Logo and university name */
+  .logoAndUniName {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #152259;
+
+  }
+  
+  .logoAndUniName img {
+    width: 150px;
+    height: 80px;
+    object-fit: contain;
+  }
+  
+  .logoAndUniName h6 {
+    font-size: 14px;
+    font-weight: normal;
+
+    color: #ffffff;
+    text-align: center;
+  }
+  
+  /* Main content wrapper */
+  .menuContent {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    gap: 30px;
+    padding: 0 20px;
+  }
+  
+  /* Section title (like: analysis, support) */
+  .section {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  
+  .section h4 {
+    font-size: 16px;
+    font-weight: 700;
+    color: #A1A1AA;
+    margin: 0;
+    text-transform: uppercase;
+  }
+  
+  /* Nav links */
+  .section a {
+    font-size: 14px;
+    color: #222;
+    text-decoration: none;
+    padding: 6px 0;
+    display: block;
+  }
+  
+  .section a:hover,
+  .section a.active {
+    color: #007bff;
+    font-weight: 600;
+  }
+  
+  /* Buttons */
+  button {
+    background-color: transparent;
+    border: none;
+    font-size: 14px;
+    cursor: pointer;
+    padding: 6px 0;
+    color: #007bff;
+  }
+  
+  button:hover {
+    text-decoration: underline;
+  }
+  
+  /* Nested list (e.g. for specialists dropdown) */
+  .dropdown {
+    padding-left: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+  }
+  
+  .crtGroupBtn{
+    background-color: #4F46E5;
+    width: 212px;
+    color: white;
+    padding: 10px;
+    border-radius: 10px;
+  }
+
+  .homeButton{
+    display: flex;
+    gap: 10px;
+  }
+
+  .homeButton a{
+    color: black;
+    text-decoration: none;
+  }
+
+  .navItem {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: #222;
+    font-size: 14px;
+    padding: 6px 0;
+    cursor: pointer;
+  }
+  
+  .navItem a {
+    text-decoration: none;
+    color: inherit;
+  }
+  
+  .navItem a.active {
+    font-weight: 600;
+    color: #4F46E5;
+  }
+  
+  .navItem:hover {
+    color: #4F46E5;
+  }
+  
+  .dropdown a {
+    padding-left: 24px;
+    font-size: 13px;
+  }
+  

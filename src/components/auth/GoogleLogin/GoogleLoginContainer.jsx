@@ -3,7 +3,7 @@ import { useGoogleLogin } from "@react-oauth/google";
 import { connect } from "react-redux";
 
 import GoogleLogin from "./GoogleLogin";
-import { googleLoginThunk } from "../../redux/reducers/authUserReducer";
+import { googleLoginThunk } from "../../../redux/reducers/authUserReducer";
 
 const GoogleLoginContainer = ({ googleLoginThunk }) => {
     const responseGoogle = async (authResult) => {

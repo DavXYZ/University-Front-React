@@ -1,0 +1,123 @@
+body {
+  margin: 0;
+  padding: 0;
+  
+}
+
+
+.profileWrap {
+    display: grid;
+    grid-template-areas:
+    "n ha"
+    "n c"
+    ;
+}
+
+.profileContainer {
+    grid-area: c;
+    display: flex;
+    gap: 30px;
+    padding: 30px;
+    font-family: Arial, sans-serif;
+    color: #333;
+  }
+  
+  .left {
+    flex: 1;
+  }
+  
+  .right {
+    width: 320px;
+  }
+  
+  .userCard {
+    text-align: center;
+  }
+  
+  .avatar {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    object-fit: cover;
+  }
+  
+  .role, .id {
+    margin: 4px 0;
+  }
+  
+  .infoBlock {
+    margin-top: 20px;
+  }
+  
+  .infoItem {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 6px 0;
+  }
+  
+  .progressSection {
+    margin-top: 20px;
+  }
+  
+  .circularProgress .circle {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    background: #eee;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    margin-bottom: 10px;
+  }
+  
+  .simpleProgress .bar {
+    width: 100%;
+    height: 6px;
+    background: #ddd;
+    margin: 4px 0;
+  }
+  
+  .simpleProgress .barFill {
+    width: 65%;
+    height: 100%;
+    background: purple;
+  }
+  
+  .bottomStats {
+    margin-top: 30px;
+  }
+  
+  .publicationCard {
+    background: #f9f9f9;
+    padding: 15px;
+    border-radius: 12px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+  }
+  
+  .publicationCard img {
+    width: 100%;
+    border-radius: 8px;
+  }
+  
+  .timer {
+    font-size: 20px;
+    font-weight: bold;
+    text-align: center;
+    margin: 10px 0;
+  }
+  
+  .actionLinks p, .actionLinks button {
+    margin: 6px 0;
+  }
+  
+  .newLabel {
+    background: purple;
+    color: white;
+    padding: 4px 8px;
+    font-size: 12px;
+    border-radius: 6px;
+    float: right;
+  }
+  

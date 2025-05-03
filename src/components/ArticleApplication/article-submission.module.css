@@ -1,0 +1,19 @@
+.container {
+    width: 100%;
+    min-height: 100vh;
+    background: white;
+    padding-bottom: 56px;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .content {
+    display: flex;
+    gap: 148px;
+  }
+  
+  .mainContent {
+    flex: 1;
+    padding: 8px 0;
+  }
+  

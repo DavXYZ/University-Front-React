@@ -1,0 +1,292 @@
+
+.uploadContainer {
+    position: relative;
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .profileImage {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+    filter: brightness(50%); /* Dim the background */
+  }
+  
+  .fileInput {
+    display: none; /* Hide the input */
+  }
+
+  .uploadLabel {
+    position: relative;
+    display: block;
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
+  }
+  
+  .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .uploadIcon {
+    width: 40px;
+    height: 40px;
+    opacity: 0.8;
+    object-fit: contain; /* Prevent stretching */
+}
+
+  /* Register.module.css */
+
+
+
+/* Main Container */
+.container {
+  max-width: 1200px;
+  margin: 2rem auto;
+  padding: 0 1rem;
+}
+
+/* Form Grid Layout */
+.formContainer {
+  display: grid;
+  grid-template-areas: "l r";
+  grid-template-columns: 2fr 1fr;
+  gap: 2rem;
+}
+
+.left {
+  grid-area: l;
+  padding: 1rem;
+}
+
+.right {
+  grid-area: r;
+  padding: 1rem;
+  border-radius: 8px;
+}
+
+.termOfUse{
+  font-size: small;
+}
+
+.termOfUse u{
+  
+  color: black;
+}
+
+/* Form Sections */
+.userInfo, .aboutArticles {
+  margin-bottom: 2rem;
+}
+
+.userInfo span a u {
+  color: black;
+}
+
+/* Headings */
+.formHeading {
+  font-size: 1.8rem;
+  color: #2c3e50;
+  margin-bottom: 1rem;
+}
+
+h2 {
+  font-size: 1.4rem;
+  color: #2c3e50;
+  margin-bottom: 1.5rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 1px solid #eee;
+}
+
+/* Form Elements */
+.label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-weight: 500;
+  color: #34495e;
+}
+
+.input {
+  width: 100%;
+  padding: 0.75rem;
+  margin-bottom: 1rem;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 1rem;
+  transition: border-color 0.3s;
+}
+
+.input:focus {
+  outline: none;
+  border-color: #3498db;
+}
+
+.textarea {
+  padding: 0.75rem 1rem;
+  font-size: 1rem;
+  font-family: inherit;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  resize: vertical;
+  min-height: 120px;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+  background-color: #fff;
+  color: #222;
+}
+
+.textarea:focus {
+  outline: none;
+  border-color: #007bff;
+  box-shadow: 0 0 0 3px rgba(0, 123, 255, 0.25);
+}
+
+/* Select Dropdown */
+select.input {
+  appearance: none;
+  background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='6 9 12 15 18 9'%3E%3C/polyline%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 0.75rem center;
+  background-size: 1rem;
+}
+
+
+.uploadLabel:hover .overlay {
+  background-color: rgba(0,0,0,0.5);
+}
+
+
+/* Checkbox */
+.checkboxLabel {
+  display: flex;
+  align-items: center;
+  margin: 1.5rem 0;
+  cursor: pointer;
+  font-size: 0.9rem;
+  color: #7f8c8d;
+}
+
+.checkbox {
+  margin-right: 0.75rem;
+  width: 1.1rem;
+  height: 1.1rem;
+}
+
+/* Button */
+.btn {
+  width: 100%;
+  padding: 0.75rem;
+  background-color: #2563eb;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  font-size: 1rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.btn:hover {
+  background-color: #2980b9;
+}
+
+.btn:disabled {
+  background-color: #bdc3c7;
+  cursor: not-allowed;
+}
+
+/* Error Messages */
+.formSummaryError {
+  color: #e74c3c;
+  font-size: 0.85rem;
+  margin-top: -0.5rem;
+  margin-bottom: 1rem;
+}
+
+/* Terms Link */
+a {
+  color: #3498db;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .formContainer {
+    grid-template-areas: "l" "r";
+    grid-template-columns: 1fr;
+  }
+  
+  .left, .right {
+    padding: 1rem 0;
+  }
+}
+.loginButton{
+  margin-top: 14px;
+  text-align: center;
+}
+
+.loginButton a {
+  color: #2563eb;
+}
+
+/* Show errors only after submit */
+.inputContainer:not(.invalid) .errorMessage {
+    display: none;
+  }
+  
+  /* Make invalid state more noticeable */
+  .inputContainer.invalid {
+    margin-bottom: 1rem;
+  }
+
+  /* Add these styles to your existing CSS */
+
+.formRow {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 -0.5rem;
+  margin-bottom: 1rem;
+}
+
+.formColumn {
+  flex: 1;
+  min-width: 200px;
+  padding: 0 0.5rem;
+  margin-bottom: 1rem;
+  width: 50%;
+}
+
+/* Adjust the input width inside columns */
+.formColumn .input {
+  width: 100%;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .formRow {
+    flex-direction: column;
+  }
+  
+  .formColumn {
+    padding: 0;
+    margin-bottom: 1rem;
+  }
+}
+
+

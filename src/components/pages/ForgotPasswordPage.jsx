@@ -1,7 +1,7 @@
 // ForgotPasswordPage.jsx
 
-import ForgotPassword from "../auth/ForgotPassword/ForgotPassword";
+import ForgotPasswordContainer from "../auth/ForgotPassword/ForgotPasswordContainer";
 
 export default function ForgotPasswordPage() {
-  return <ForgotPassword />;
+  return <ForgotPasswordContainer />;
 }

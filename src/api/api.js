@@ -43,7 +43,6 @@ export const authApi = {
     },
 
     async login(email, password,remember_me) {
-        debugger
         try {
             const response = await instance.post('auth/login', { email, password,remember_me }, { withCredentials: true });
             return response.data;
@@ -53,18 +52,8 @@ export const authApi = {
         }
     },
 
-    // async register(firstName, lastName, email, username, password) {
-    //     try {
-    //         const response = await instance.post('auth/register', { firstName, lastName, email, username, password });
-    //         return response.data;
-    //     } catch (error) {
-    //         console.error("Error during registration:", error);
-    //         throw error;
-    //     }
-    // },
 
     register: async (formData) => {
-        debugger
         const response = await instance.post('auth/register', formData);
         return response.data;
     },
@@ -78,7 +67,6 @@ export const authApi = {
             window.location.href = '/login';  // Redirect to login page on error
         }
     },    
-
     async forgetPassword(email) {
         try {
             const response = await instance.post("auth/forgot-password", { email });
@@ -99,6 +87,18 @@ export const authApi = {
         }
     },
 
+    async verifyCodePassword(data) {
+        try {
+            const response = await instance.post('/auth/verify-code', {
+                email: data.email,
+                verificationCode: data.verificationCode // Changed from 'code' to 'verificationCode'
+            }, { withCredentials: true });
+            return response.data;
+        } catch (error) {
+            throw new Error(error.response?.data?.message || 'Error verification code');
+        }
+    },
+
     async googleLogin() {
         try {
             const response = await instance.get('/auth/callback/success', { withCredentials: true });
@@ -109,18 +109,41 @@ export const authApi = {
     }
 };
 
+// export const googleAuthApi = {
+//     async googleAuth(code) {
+//         try {
+//             const response = await instance.get(`/auth/google?code=${code}`, { withCredentials: true });
+//             return response.data;
+//         } catch (error) {
+//             console.error("Google authentication error:", error);
+//             throw error;
+//         }
+//     }
+// };
+
+
+// In your api.js
 export const googleAuthApi = {
     async googleAuth(code) {
         try {
-            const response = await instance.get(`/auth/google?code=${code}`, { withCredentials: true });
+            const response = await instance.get(`/auth/google?code=${code}`,{ withCredentials: true });
             return response.data;
         } catch (error) {
             console.error("Google authentication error:", error);
             throw error;
         }
+    },
+    
+    async completeGoogleRegistration(data) {
+        try {
+            const response = await instance.post('/auth/complete-google-registration', data);
+            return response.data;
+        } catch (error) {
+            console.error("Google registration completion error:", error);
+            throw error;
+        }
     }
 };
-
 
 export const translationApi = {
     async translateDynamic(text, targetLanguage) {
@@ -129,7 +152,6 @@ export const translationApi = {
                 text,
                 targetLanguage
             });
-            debugger
             return response.data.translation || text; // Fallback to original if translation fails
         } catch (error) {
             console.error('Translation error:', error);
@@ -144,7 +166,7 @@ export const translationApi = {
         
         // If no static translation, try dynamic translation
         if (i18n.language !== 'en') {
-            debugger // Don't translate if already English
+             // Don't translate if already English
             return await this.translateDynamic(name, i18n.language);
         }
         

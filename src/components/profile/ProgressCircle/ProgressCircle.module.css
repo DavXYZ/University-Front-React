@@ -1,0 +1,14 @@
+
+  
+  .progressRing {
+    transform: rotate(-90deg);
+  }
+  
+  .percentageText {
+    fill: #000;
+    font-size: 15px;
+    font-weight: bold;
+    transform: rotate(90deg);
+    transform-origin: 50% 50%;
+  }
+  

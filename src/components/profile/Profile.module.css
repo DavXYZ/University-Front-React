@@ -1,123 +1,314 @@
+/* Profile.module.css */
+
 body {
   margin: 0;
   padding: 0;
-  
+  font-family: Arial, sans-serif;
 }
 
-
 .profileWrap {
-    display: grid;
-    grid-template-areas:
+  display: grid;
+  grid-template-areas:
     "n ha"
-    "n c"
-    ;
+    "n c";
+  grid-template-columns: 280px 1fr;
+  min-height: 100vh;
 }
 
 .profileContainer {
-    grid-area: c;
+  grid-area: c;
+  display: flex;
+  gap: 30px;
+  padding: 30px;
+  color: #333;
+
+}
+
+.left {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.right {
+  width: 320px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+
+}
+  .userCard {
     display: flex;
-    gap: 30px;
-    padding: 30px;
-    font-family: Arial, sans-serif;
-    color: #333;
+    align-items: center;
+    background: white;
+    text-align: left; /* Optional: better for name + details layout */
   }
   
-  .left {
-    flex: 1;
+  .userInfo {
+    display: flex;
+    flex-direction: column;
+    margin-left: 20px; /* Add spacing between avatar and text */
+  }
+  
+  .roleId {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  
+.avatar {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 3px solid #f0f0f0;
+  margin-bottom: 15px;
+}
+
+.userCard h2 {
+  margin: 10px 0 5px;
+  font-size: 1.5rem;
+}
+
+.role, .id {
+  margin: 4px 0;
+  color: #666;
+  font-size: 0.9rem;
+}
+
+.infoBlock {
+  background: white;
+
+
+}
+.infoItem {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 0;
+  border-bottom: 1px solid #f0f0f0;
+}
+
+.infoItem span:first-child {
+  width: 120px;
+  font-weight: 500;
+}
+
+.valueBlock {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex: 1;
+}
+
+
+
+.valueBlock input {
+  border: none;
+  background: transparent;
+  font-size: 0.95rem;
+  color: #333;
+  flex: 1;
+  cursor: default;
+}
+
+.copyIcon,
+.mailIcon {
+  color: #000000;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: transform 0.2s ease;
+}
+
+.copyIcon:hover,
+.mailIcon:hover {
+  transform: scale(1.1);
+}
+
+
+.infoItem:last-child {
+  border-bottom: none;
+}
+
+.infoItem span:first-child {
+  font-weight: 500;
+  color: #444;
+  white-space: nowrap;
+}
+
+.infoItem span:not(:first-child) {
+  color: #333;
+}
+
+.infoItem input {
+  width: 100%;
+  border: none;
+  background: transparent;
+  font-size: 0.95rem;
+  color: #333;
+}
+
+.infoItem svg {
+  color: #000000;
+  min-width: 20px;
+  cursor: pointer;
+}
+
+
+.progressSection {
+  display: flex;
+  gap: 20px;
+  background: white;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+}
+
+.circularProgress {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex: 1;
+}
+
+.circularProgress .circle {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  background: conic-gradient(#4F46E5 71%, #e0e0e0 0%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  margin-bottom: 10px;
+  color: white;
+}
+
+.simpleProgress {
+  flex: 2;
+}
+
+.simpleProgress .bar {
+  width: 100%;
+  height: 8px;
+  background: #e0e0e0;
+  border-radius: 4px;
+  margin: 8px 0;
+  overflow: hidden;
+}
+
+.simpleProgress .barFill {
+  width: 65%;
+  height: 100%;
+  background: #4F46E5;
+  border-radius: 4px;
+}
+
+.bottomStats {
+  background: white;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+}
+
+.bottomStats h4 {
+  margin-top: 0;
+  color: #4F46E5;
+}
+
+.publicationCard {
+  background: white;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  position: relative;
+}
+
+.publicationCard img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 8px;
+  margin: 10px 0;
+}
+
+.timer {
+  font-size: 1.5rem;
+  font-weight: bold;
+  text-align: center;
+  margin: 15px 0;
+  color: #4F46E5;
+}
+
+.timer p {
+  font-size: 0.8rem;
+  color: #666;
+  margin-top: 5px;
+}
+
+.publicationCard button {
+  width: 100%;
+  padding: 10px;
+  background-color: #4F46E5;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-weight: 500;
+  cursor: pointer;
+  margin: 10px 0;
+  transition: background-color 0.2s;
+}
+
+.publicationCard button:hover {
+  background-color: #4338CA;
+}
+
+.actionLinks {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-top: 15px;
+}
+
+.actionLinks p {
+  margin: 0;
+  font-size: 0.9rem;
+  color: #666;
+}
+
+.newLabel {
+  background: #4F46E5;
+  color: white;
+  padding: 4px 10px;
+  font-size: 0.8rem;
+  border-radius: 12px;
+  position: absolute;
+  top: 15px;
+  right: 15px;
+}
+
+/* Responsive adjustments */
+@media (max-width: 1200px) {
+  .profileContainer {
+    flex-direction: column;
   }
   
   .right {
-    width: 320px;
-  }
-  
-  .userCard {
-    text-align: center;
-  }
-  
-  .avatar {
-    width: 100px;
-    height: 100px;
-    border-radius: 50%;
-    object-fit: cover;
-  }
-  
-  .role, .id {
-    margin: 4px 0;
-  }
-  
-  .infoBlock {
-    margin-top: 20px;
-  }
-  
-  .infoItem {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    padding: 6px 0;
+    width: 100%;
   }
   
   .progressSection {
-    margin-top: 20px;
+    flex-direction: column;
   }
-  
-  .circularProgress .circle {
-    width: 80px;
-    height: 80px;
-    border-radius: 50%;
-    background: #eee;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-weight: bold;
-    margin-bottom: 10px;
-  }
-  
-  .simpleProgress .bar {
-    width: 100%;
-    height: 6px;
-    background: #ddd;
-    margin: 4px 0;
-  }
-  
-  .simpleProgress .barFill {
-    width: 65%;
-    height: 100%;
-    background: purple;
-  }
-  
-  .bottomStats {
-    margin-top: 30px;
-  }
-  
-  .publicationCard {
-    background: #f9f9f9;
-    padding: 15px;
-    border-radius: 12px;
-    box-shadow: 0 2px 6px rgba(0,0,0,0.05);
-  }
-  
-  .publicationCard img {
-    width: 100%;
-    border-radius: 8px;
-  }
-  
-  .timer {
-    font-size: 20px;
-    font-weight: bold;
-    text-align: center;
-    margin: 10px 0;
-  }
-  
-  .actionLinks p, .actionLinks button {
-    margin: 6px 0;
-  }
-  
-  .newLabel {
-    background: purple;
-    color: white;
-    padding: 4px 8px;
-    font-size: 12px;
-    border-radius: 6px;
-    float: right;
-  }
-  
+}
+
+.onGoingArticle{
+  display: flex;
+  justify-content: space-between;
+}
+
+.phaseAndDate{
+  display: flex;
+  flex-direction: column;
+}

@@ -1,29 +1,135 @@
+/* HeaderAuthor.module.css */
 .headerAuthor {
-    grid-area: ha;
+  --header-gap: 1.5rem;
+  --text-color: #111827;
+  --border-color: #e5e5e5;
+  
+  display: flex;
+  align-items: center;
+  padding: 0.625rem 1.25rem;
+  background-color: white;
+  border-bottom: 1px solid var(--border-color);
+  gap: var(--header-gap);
+  overflow-x: auto; /* Allows horizontal scrolling if needed */
+  scrollbar-width: none; /* Hide scrollbar */
+}
 
-    width: 1159px;
-    height: 66px;
+.headerAuthor::-webkit-scrollbar {
+  display: none; /* Hide scrollbar for Webkit */
+}
 
-    background: #FFFFFF;
+.navItems {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  flex-shrink: 0;
+}
 
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 0 20px;
+/* Unified button/link styles */
+.navLink, 
+.dropdownWrapper {
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: var(--text-color);
+  white-space: nowrap;
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
 
-    /* Optional layout hints */
-    flex: none;
-    order: 0;
-    flex-grow: 0;
+/* DropDownButton.module.css */
+.dropdownWrapper {
+  position: relative;
+  display: inline-flex;
+}
 
-    border-radius: 8px;
-    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+.toggleButton {
+  all: unset; /* Reset all styles */
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+  cursor: pointer;
+  padding: 0.5rem 0.75rem;
+  transition: opacity 0.2s ease;
+}
+
+.toggleButton:hover {
+  opacity: 0.8;
+}
+
+.dropdownContent {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  min-width: 200px;
+  padding: 0.75rem;
+  background: white;
+  border: 1px solid var(--border-color);
+  border-radius: 0.375rem;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+  z-index: 100;
+}
+
+/* Right section items */
+.rightSection {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-left: auto;
+}
+
+/* Plus button */
+.plusButton {
+  display: grid;
+  place-items: center;
+  font-size: 25px;
+  width: 2rem;
+  height: 2rem;
+  background: black;
+  color: white;
+  border-radius: 50%;
+  border: none;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+
+.plusButton:hover {
+  transform: scale(1.05);
+}
+
+/* User avatars */
+.randomUsers {
+  display: flex;
+  align-items: center;
 }
 
 .randomUsers img {
-    width: 20px;
-    height: 20px;
-    border-radius: 50%;
-    object-fit: cover;
-    margin-left: 5px;
+  width: 1.75rem;
+  height: 1.75rem;
+  border-radius: 50%;
+  border: 2px solid white;
+  margin-left: -0.5rem;
+}
+
+.randomUsers img:first-child {
+  margin-left: 0;
+}
+
+/* Profile image */
+.profileLink img {
+  width: 2rem;
+  height: 2rem;
+  border-radius: 50%;
+  border: 2px solid var(--border-color);
+  transition: border-color 0.2s ease;
+}
+
+.profileLink img:hover {
+  border-color: #d1d5db;
+}
+
+/* Settings icon */
+.settingsLink {
+  font-size: 1.25rem;
+  color: var(--text-color);
 }

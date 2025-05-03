@@ -1,6 +1,8 @@
 import { useState } from "react";
 import { useTranslation } from "react-i18next";
-import { NavLink } from "react-router";
+import { NavLink } from "react-router-dom";
+import { connect } from "react-redux";
+import { logout } from "../../../redux/reducers/authUserReducer";
 import s from './NavBar.module.css';
 
 import npuaLogo from '../../assets/npualogo.png';
@@ -13,12 +15,18 @@ import { IoSettingsOutline } from "react-icons/io5";
 import { MdOutlineLogout } from "react-icons/md";
 import { GoChevronDown, GoChevronUp } from "react-icons/go";
 
-const NavBar = () => {
+const NavBar = ({ logout }) => {
   const { t } = useTranslation();
   const [isSpecialistOpen, setIsSpecialistOpen] = useState(false);
 
   const toggleSpecialists = () => {
     setIsSpecialistOpen(prev => !prev);
+  };
+
+  const handleLogout = () => {
+    logout();
+    // Optionally redirect after logout
+    window.location.href = '/login';
   };
 
   return (
@@ -38,14 +46,14 @@ const NavBar = () => {
           <NavLink to="/home">{t('home')}</NavLink>
         </div>
 
+        <h4>{t('analysis')}</h4>
         <div className={s.section}>
-          <h4>{t('analysis')}</h4>
           <div className={s.navItem}><PiChartLineLight /> <NavLink to="#">{t("statistics")}</NavLink></div>
           <div className={s.navItem}><PiBellLight /> <NavLink to="#">{t("notices")}</NavLink></div>
         </div>
 
+        <h4>{t('support')}</h4>
         <div className={s.section}>
-          <h4>{t('support')}</h4>
           <div className={s.navItem}><LuMailOpen /> <NavLink to="#">{t("notification")}</NavLink></div>
           <div className={s.navItem}><LuUsers /> <NavLink to="#">{t("applicants")}</NavLink></div>
           <div className={s.navItem} onClick={toggleSpecialists}>
@@ -61,19 +69,26 @@ const NavBar = () => {
           )}
         </div>
 
+        <h4>{t('articles')}</h4>
         <div className={s.section}>
-          <h4>{t('articles')}</h4>
           <div className={s.navItem}><IoSettingsOutline /> <NavLink to="#">{t("article_management")}</NavLink></div>
           <div className={s.navItem}><IoSettingsOutline /> <NavLink to="#">{t("article_files")}</NavLink></div>
         </div>
 
         <div className={s.section}>
           <div className={s.navItem}><IoSettingsOutline /> <NavLink to="#">{t('settings')}</NavLink></div>
-          <div className={s.navItem}><MdOutlineLogout /> <button>{t('logout')}</button></div>
+          <div className={s.navItem}>
+            <MdOutlineLogout /> 
+            <button onClick={handleLogout}>{t('logout')}</button>
+          </div>
         </div>
       </div>
     </div>
   );
 };
 
-export default NavBar;
+const mapDispatchToProps = {
+  logout
+};
+
+export default connect(null, mapDispatchToProps)(NavBar);

@@ -1,0 +1,263 @@
+.container {
+    width: 872px;
+    padding: 8px 0;
+    background: white;
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+  }
+  
+  .header {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }
+  
+  .title {
+    color: #191919;
+    font-size: 26px;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 400;
+    line-height: 39px;
+    margin: 0;
+  }
+  
+  .subtitle {
+    color: #6b7280;
+    font-size: 16px;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 400;
+    line-height: 24px;
+    margin: 0;
+  }
+  
+  .description {
+    color: #6b7280;
+    font-size: 14px;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 400;
+    line-height: 21px;
+    max-width: 724px;
+    margin: 0;
+  }
+  
+  .authorCard {
+    width: 100%;
+    height: 136px;
+    padding: 12px 16px;
+    background: white;
+    border: 1px solid #e0e4eb;
+    display: flex;
+    align-items: flex-start;
+  }
+  
+  .authorInfo {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+  
+  .authorName {
+    color: #191919;
+    font-size: 16px;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 400;
+    line-height: 24px;
+  }
+  
+  .authorDetails {
+    display: flex;
+    justify-content: space-between;
+    padding: 0 72px;
+  }
+  
+  .detailsLeft,
+  .detailsRight {
+    font-size: 14px;
+    font-family: "Montserrat", sans-serif;
+    line-height: 21px;
+    color: #191919;
+  }
+  
+  .detailsLeft p,
+  .detailsRight p {
+    margin: 0;
+  }
+  
+  .formSection {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }
+  
+  .sectionTitle {
+    color: #191919;
+    font-size: 20px;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 400;
+    line-height: 30px;
+    margin: 0;
+  }
+  
+  .sectionDescription {
+    color: #6b7280;
+    font-size: 14px;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 400;
+    line-height: 21px;
+    max-width: 724px;
+    margin: 0;
+  }
+  
+  .selectWrapper {
+    position: relative;
+    width: 100%;
+    max-width: 724px;
+  }
+  
+  .select {
+    width: 100%;
+    padding: 8px;
+    background: white;
+    border-radius: 8px;
+    border: 1px solid #d1d5db;
+    color: #808080;
+    font-size: 14px;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 500;
+    line-height: 21px;
+    appearance: none;
+  }
+  
+  .selectIcon {
+    position: absolute;
+    right: 8px;
+    top: 50%;
+    transform: translateY(-50%);
+    pointer-events: none;
+  }
+  
+  .textareaContainer {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    align-items: flex-end;
+  }
+  
+  .textarea {
+    width: 100%;
+    height: 108px;
+    background: white;
+    border: 1px solid #566780;
+    resize: none;
+    font-family: "Montserrat", sans-serif;
+    padding: 8px;
+  }
+  
+  .charCount {
+    color: #2e3f58;
+    font-size: 14px;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 400;
+    line-height: 21px;
+  }
+  
+  .searchInput {
+    width: 100%;
+    max-width: 724px;
+  }
+  
+  .input {
+    width: 100%;
+    padding: 8px;
+    background: white;
+    border-radius: 8px;
+    border: 1px solid #f3f3f7;
+    color: #808080;
+    font-size: 14px;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 500;
+    line-height: 21px;
+  }
+  
+  .coauthorsInfo {
+    padding: 0 8px;
+    color: #7b7b7b;
+    font-size: 12px;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 300;
+    line-height: 18px;
+  }
+  
+  .addAuthorButton {
+    display: flex;
+    justify-content: flex-start;
+  }
+  
+  .outlineButton {
+    height: 40px;
+    padding: 8px;
+    border-radius: 8px;
+    border: 1px solid #2563eb;
+    background: white;
+    color: #2563eb;
+    font-size: 14px;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 500;
+    line-height: 21px;
+    cursor: pointer;
+  }
+  
+  .actionButtons {
+    display: flex;
+    gap: 8px;
+    justify-content: flex-end;
+  }
+  
+  .saveButton {
+    width: 150px;
+    height: 40px;
+    padding: 8px;
+    background: white;
+    border-radius: 8px;
+    border: none;
+    color: #2563eb;
+    font-size: 14px;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 500;
+    line-height: 21px;
+    text-decoration: underline;
+    cursor: pointer;
+  }
+  
+  .prevButton {
+    width: 150px;
+    height: 40px;
+    padding: 8px;
+    background: white;
+    border-radius: 8px;
+    border: 1px solid #dcdde5;
+    color: #202224;
+    font-size: 14px;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 500;
+    line-height: 21px;
+    cursor: pointer;
+  }
+  
+  .nextButton {
+    width: 150px;
+    height: 40px;
+    padding: 8px;
+    background: #2563eb;
+    border-radius: 8px;
+    border: 1px solid #dcdde5;
+    color: white;
+    font-size: 14px;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 500;
+    line-height: 21px;
+    cursor: pointer;
+  }
+  

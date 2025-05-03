@@ -1,62 +1,116 @@
-// src/components/ForgotPassword/ForgotPassword.jsx
-import { Formik, Form, Field, ErrorMessage } from "formik";
+"use client"
+import { useState } from "react";
+import { Formik, Form, Field } from "formik";
 import * as Yup from "yup";
 import { Link } from "react-router-dom";
-import { useState } from "react";
 import Header from "../../common/Header";
 import NavBar from "../../common/NavBar";
 import Footer from "../../common/Footer";
 import s from "./ForgotPassword.module.css";
-import forgotPasswordImg from '../../assets/forget-password.png'
 import ValidationError from "../../../validation/components/ValidationError";
-import LearnMore from '../../common/LearnMore'
+import forgotPasswordImg from "../../assets/forget-password.png";
 
 const validationSchema = Yup.object({
-  email: Yup.string()
-    .email("Invalid email address")
-    .required("Email is required"),
+  email: Yup.string().email("Invalid email address").required("Email is required"),
 });
 
-const ForgotPassword = () => {
-  const [submitted, setSubmitted] = useState(false);
-  const [isLoading, setIsLoading] = useState(false);
+const ForgotPassword = ({
+  forgetPassword,
+  verifyCodePassword, // Added from props
+  isLoading,
+  submitted,
+  setIsLoading,
+  setSubmitted,
+}) => {
+  const [verificationCode, setVerificationCode] = useState("");
+  const [codeError, setCodeError] = useState("");
+  const [submittedEmail, setSubmittedEmail] = useState("");
 
   const handleSubmit = async (values, { setSubmitting, setErrors }) => {
     setIsLoading(true);
     try {
-      // Replace with your actual API call
-      const response = await fetch('/api/auth/forgot-password', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify({ email: values.email }),
-      });
-
-      if (!response.ok) {
-        throw new Error('Failed to send reset link');
-      }
-
+      await forgetPassword(values.email);
+      setSubmittedEmail(values.email); // Save email for verification
       setSubmitted(true);
     } catch (error) {
-      setErrors({ email: error.message });
+      setErrors({ email: error.message || "Something went wrong" });
     } finally {
       setIsLoading(false);
       setSubmitting(false);
     }
   };
 
+  const handleVerifyCode = async () => {
+    if (!verificationCode) {
+      setCodeError("Please enter the verification code.");
+      return;
+    }
+
+    setIsLoading(true);
+    try {
+       verifyCodePassword({ 
+        verificationCode, 
+        email: submittedEmail 
+      });
+      setCodeError("");
+      alert("Verification successful. Check your email for reset instructions.");
+    } catch (error) {
+      setCodeError("Invalid or expired verification code.");
+    } finally {
+      setIsLoading(false);
+    }
+  };
+
   return (
-    <div>
+    <div className={s.pageContainer}>
       <Header />
       <NavBar />
-      <div className={s.container}>
+      <div className={s.mainContent}>
+        <div className={s.leftSection}>
+          <div className={s.imageContainer}>
+            <img
+              src={forgotPasswordImg}
+              alt="Decorative background"
+              className={s.backgroundImage}
+            />
+          </div>
+        </div>
+
         <div className={s.formContainer}>
           {submitted ? (
             <div className={s.successMessage}>
-              <p>We've sent a password reset link to your email address.</p>
-              <p>Please check your inbox and follow the instructions.</p>
-              <Link to="/login" className={s.backToLogin}>Back to Login</Link>
+              <h2 className={s.formTitle}>Հաջողություն</h2>
+              <p>Մենք ուղարկել ենք վերականգնման կոդը ձեր էլ. փոստին:</p>
+              
+              {/* Verification Code Input */}
+              <div className={s.inputGroup}>
+                <label htmlFor="verificationCode" className={s.inputLabel}>
+                  Վերականգնման կոդ
+                </label>
+                <div className={s.inputField}>
+                  <input
+                    id="verificationCode"
+                    type="text"
+                    value={verificationCode}
+                    onChange={(e) => setVerificationCode(e.target.value)}
+                    placeholder="Enter verification code"
+                    className={s.input}
+                  />
+                </div>
+                {codeError && <div className={s.errorMessage}>{codeError}</div>}
+              </div>
+
+              <button
+                onClick={handleVerifyCode}
+                disabled={isLoading}
+                className={s.submitButton}
+              >
+                {isLoading ? "Verifying..." : "Verify Code"}
+              </button>
+
+              <Link to="/login" className={s.loginLink}>
+                Վերադառնալ մուտքի էջ
+              </Link>
             </div>
           ) : (
             <Formik
@@ -65,43 +119,40 @@ const ForgotPassword = () => {
               onSubmit={handleSubmit}
             >
               {({ isSubmitting }) => (
-                <Form className={s.form}>
+                <Form className={s.formWrapper}>
+                  <h2 className={s.formTitle}>Մոռացե՞լ եք գաղտնաբառը</h2>
 
-
-                  <div className={s.left}>
-                    <img src={forgotPasswordImg} />
-                  </div>
-                  <div className={s.right}>
-                    <div className={s.forgotPasswordLogic}>
-
-
-                      <h2>Մոռացե՞լ եք գաղտնաբառը</h2>
-                      <div className={s.inputGroup}>
-                        <label htmlFor="email">Email Address</label>
+                  <div className={s.formFields}>
+                    <div className={s.inputGroup}>
+                      <label htmlFor="email" className={s.inputLabel}>
+                        Էլ փոստ կամ հեռախոսահամար
+                      </label>
+                      <div className={s.inputField}>
                         <Field
                           id="email"
                           name="email"
                           type="email"
-                          placeholder="Enter your email"
+                          placeholder="info@polytechnic.am"
                           className={s.input}
                         />
-                        <ValidationError 
-                          name="email" 
-                          id="emailError" 
-                        />
                       </div>
-                      <button
-                        type="submit"
-                        disabled={isSubmitting || isLoading}
-                        className={s.btn}
-                      >
-                        {isLoading ? 'Sending...' : 'Send Reset Link'}
-                      </button>
-
-                      <div className={s.backToLogin}>
-                        Remember your password? <Link to="/login">Login here</Link>
-                      </div>
+                      <ValidationError name="email" id="emailError" />
                     </div>
+
+                    <button
+                      type="submit"
+                      disabled={isSubmitting || isLoading}
+                      className={s.submitButton}
+                    >
+                      {isLoading ? "Ուղարկվում է..." : "Ուղարկել"}
+                    </button>
+                  </div>
+
+                  <div className={s.loginLinkContainer}>
+                    <span>Հիշեցի՞ք ձեր գաղտնաբառը։</span>{" "}
+                    <Link to="/login" className={s.loginLink}>
+                      Մուտք գործեք այստեղ
+                    </Link>
                   </div>
                 </Form>
               )}
@@ -109,7 +160,6 @@ const ForgotPassword = () => {
           )}
         </div>
       </div>
-      <LearnMore />
       <Footer />
     </div>
   );

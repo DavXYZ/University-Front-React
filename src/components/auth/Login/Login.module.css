@@ -1,183 +1,245 @@
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    background: #ffffff;
   }
   
-
-.heading {
-    font-size: 40px;
-    font-weight: 600;
-    color: #2c444e;
+  .form_container {
     display: flex;
-    align-items: center;
-    justify-content: center;
-    position: relative;
-}
-
-.form_container {
-    display: flex;
-    margin: 45px auto 20px;
-    gap: 30px;
-    width: 750px;
-    height: 450px;
-    background-color: white;
-}
-
-.left {
-    flex: 1;
+    width: 100%;
+    max-width: 1440px;
+    background: #f4f4f4;
     overflow: hidden;
+  }
+  
+  .left {
+    flex: 1 1 0;
     position: relative;
-    border-top-left-radius: 50px;
-    border-bottom-left-radius: 50px;
-}
-
-.img {
-    width: 160%;
-    position: absolute;
-    left: -150px;
-    top: -50px;
-}
-
-.right {
-    flex: 1;
+    background: white;
+    overflow: hidden;
+    height: 100%;
+    min-height: 600px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .img {
+    max-width: 100%;
+    height: auto;
+  }
+  
+  .right {
+    width: 596px;
+    padding: 80px;
+    background: white;
+    box-shadow: -28px 0px 50px rgba(0, 0, 0, 0.05);
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
-    padding-right: 40px;
-}
-
-.form_heading {
-    font-size: 25px;
-    font-weight: 400;
-    color: #2c444e;
-    margin-bottom: 30px;
-}
-
-label {
-    font-size: 14px;
+    gap: 24px;
+  }
+  
+  .formTitle {
+    color: #555555;
+    font-size: 22px;
     font-weight: 500;
-    color: #2c444e;
+  }
+  
+  .formFields {
+    width: 100%;
+    position: relative;
+  }
+  
+  .inputGroup {
+    margin-bottom: 24px;
+  }
+  
+  .inputLabel {
     display: block;
-    margin-bottom: 5px;
-}
-
-.input {
-    width: 320px;
-    height: 35px;
-    padding: 8px;
-    margin: 5px 0 15px;
+    color: #555555;
+    font-size: 16px;
+    font-weight: 400;
+    margin-bottom: 8px;
+  }
+  
+  .inputField {
+    position: relative;
+    width: 100%;
+    height: 50px;
+    background: #f8f8f8;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+  }
+  
+  .input {
+    width: 100%;
+    height: 100%;
+    background: transparent;
+    border: none;
+    padding: 0 20px;
+    color: #333;
+    font-size: 14px;
+  }
+  
+  .input::placeholder {
+    color: #9ca3af;
+  }
+  
+  .input:focus {
     outline: none;
-    border: 1px solid #ccc;
-    background-color: #fbfbfb;
-    border-radius: 6px;
-    font-size: 13px;
-}
-
-.btn {
-    font-size: 18px;
-    font-weight: 500;
-    width: 320px;
-    padding: 12px 20px;
-    color: white;
-    background-color: #09005f;
-    box-shadow: 0px 4px 8px rgba(5, 0, 46, 0.5);
-    border-radius: 8px;
-    margin: 20px 0;
-    outline: none;
+  }
+  
+  .eyeButton {
+    position: absolute;
+    right: 20px;
+    background: transparent;
     border: none;
     cursor: pointer;
-    transition: all 0.3s ease-in-out;
-}
-
-.btn:hover {
-    background-color: #050040;
-}
-
-.signUp {
     display: flex;
-    justify-content: center;
     align-items: center;
-    text-decoration: none;
-    background-color: white;
-    border: 1px solid #09005f;
-    border-radius: 8px;
-    width: 320px;
-    padding: 12px 20px;
-    font-weight: bold;
-    text-align: center;
-    color: #09005f;
-    transition: all 0.3s ease-in-out;
-}
-
-.signUp:hover {
-    background-color: #09005f;
-    color: white;
-}
-
-.forgotPassword a {
-    color: #1400c4;
-    text-decoration: none;
-}
-
-.text {
-    font-size: 14px;
-    color: #2c444e;
-    margin: 5px 0;
-    padding: 0;
-}
-
-.text > a {
-    font-size: 16px;
-    font-weight: 500;
-    color: #ffc801;
-}
-
-.rememberAndForgot {
+    justify-content: center;
+  }
+  
+  .eyeIcon {
+    color: #525252;
+  }
+  
+  .formSummaryError {
+    color: #d83935;
+    font-size: 12px;
+    margin-top: 4px;
+  }
+  
+  .rememberForgot {
     display: flex;
     justify-content: space-between;
-    gap: 20px;
-}
-
-.orContainer {
+    align-items: center;
+    margin-bottom: 24px;
+  }
+  
+  .rememberMe {
     display: flex;
     align-items: center;
-    justify-content: center;
-    width: 100%;
-    margin: 20px 0;
-}
-
-.orText {
+  }
+  
+  .checkbox {
+    margin-right: 8px;
+  }
+  
+  .checkboxLabel {
+    color: #6c7278;
     font-size: 14px;
-    color: #2c444e;
-    margin: 0 10px;
     font-weight: 500;
-}
-
-.line {
-    flex-grow: 1;
-    height: 1px;
-    background-color: #ccc;
-}
-
-.passwordWrapper {
-    position: relative;
+  }
+  
+  .forgotPassword {
+    color: #2563eb;
+    font-size: 14px;
+    font-weight: 400;
+    text-decoration: underline;
+  }
+  
+  .loginButton {
+    width: 100%;
+    height: 50px;
+    background: #152259;
+    box-shadow: 0px 12px 24px rgba(1, 11, 253, 0.12);
+    border-radius: 10px;
+    border: none;
+    color: white;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    margin-top: 10px;
+  }
+  
+  .loginButton:disabled {
+    opacity: 0.7;
+    cursor: not-allowed;
+  }
+  
+  .alternativeLogin {
+    width: 100%;
     display: flex;
-    align-items: center;
-}
-
-.eyeButton {
+    flex-direction: column;
+    gap: 16px;
+  }
+  
+  .googleButtonContainer {
+    width: 100%;
+  }
+  
+  .divider {
+    position: relative;
+    text-align: center;
+    margin: 16px 0;
+  }
+  
+  .divider::before,
+  .divider::after {
+    content: "";
     position: absolute;
     top: 50%;
-    right: 10px;
-    transform: translateY(-50%);
-    background: none;
-    border: none;
-    cursor: pointer;
-    padding: 4px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: #2c444e;
+    width: 40%;
+    height: 1px;
+    background: #c2c2c2;
   }
+  
+  .divider::before {
+    left: 0;
+  }
+  
+  .divider::after {
+    right: 0;
+  }
+  
+  .dividerText {
+    display: inline-block;
+    padding: 0 10px;
+    background: white;
+    position: relative;
+    color: #c2c2c2;
+    font-size: 14px;
+    font-weight: 400;
+  }
+  
+  .createAccountButton {
+    width: 100%;
+    height: 50px;
+    border-radius: 8px;
+    border: 1px solid #152259;
+    background: transparent;
+    color: #152259;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+  }
+  
+  @media (max-width: 1200px) {
+    .form_container {
+      flex-direction: column;
+    }
+  
+    .left {
+      display: none;
+    }
+  
+    .right {
+      width: 100%;
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .right {
+      padding: 40px 20px;
+    }
+  }
+  

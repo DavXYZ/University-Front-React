@@ -13,6 +13,9 @@ import ForgotPasswordPage from "./components/pages/ForgotPasswordPage";
 import Login from "./components/auth/Login/Login";
 import ResetPassword from "./components/auth/ResetPassword/ResetPassword";
 import ProfileContainer from "./components/profile/ProfileContainer";
+import GoogleProfileCompletionContainer from "./components/auth/GoogleLogin/GoogleProfileCompletion/GoogleProfileCompletionContainer";
+import SelectReport from "./components/SelectReport/SelectReport";
+import ArticleSubmissionPage from "./components/pages/article-submission";
 
 function App() {
   return (
@@ -31,6 +34,9 @@ function App() {
       <Route path="/forgot-password" element={<ForgotPasswordPage />} />
       <Route path="/reset-password/*" element={<ResetPassword />} />
       <Route path="/profile/*" element={<ProfileContainer />} />
+      <Route path="/complete-profile" element={<GoogleProfileCompletionContainer />} />
+      <Route path="/select-report" element={<SelectReport />} />
+      <Route path="/article-application" element={<ArticleSubmissionPage />} />
     </Routes>
   );
 }

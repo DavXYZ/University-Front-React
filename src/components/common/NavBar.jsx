@@ -3,6 +3,7 @@ import s from './common.module.css';
 import npua from '../assets/NPUA.png';
 import { useTranslation } from "react-i18next";
 import { useState } from 'react';
+import { NavLink } from 'react-router';
 
 function NavBar() {
     const { t, i18n } = useTranslation();
@@ -60,7 +61,7 @@ function NavBar() {
                         )}
                     </div>
                 </div>
-                <button className={s.writeNowButton}>{t('write_now')}</button>
+                <NavLink to="/select-report" className={s.writeNowButton}>{t('write_now')}</NavLink>
             </div>
         </div>
     );

@@ -4,12 +4,14 @@ import { connect } from "react-redux";
 
 import GoogleLogin from "./GoogleLogin";
 import { googleLoginThunk } from "../../../redux/reducers/authUserReducer";
+import { useNavigate } from "react-router";
 
 const GoogleLoginContainer = ({ googleLoginThunk }) => {
+    const navigate = useNavigate();
     const responseGoogle = async (authResult) => {
         if (authResult['code']) {
             // Dispatch the thunk with the auth code
-            await googleLoginThunk(authResult['code']);
+            await googleLoginThunk(authResult['code'],navigate);
         }
         console.log(authResult);
     };

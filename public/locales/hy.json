@@ -3,7 +3,7 @@
   "our_publications": "Մեր Հրապարակումները",
   "announcements": "Հայտարարություններ",
   "contact_us": "Կապ մեզ հետ",
-  "write_now": "Գրել հիմա",
+  "write_now": "Ուղարկել զեկույց",
   "validation": {
     "required": "Պարտադիր է",
     "minLength": "Պետք է լինի առնվազն {{min}} նիշ",
@@ -405,5 +405,7 @@
 "settings":"Կարգավորումներ",
 "logout":"Դուրս Գալ",
 "reviewer":"Գրախոս",
-"editor":"Խմբագիր"
+"editor":"Խմբագիր",
+"faculties":"Ֆակուլտետներ",
+"editors":"Խմբագիրներ"
 }

@@ -250,7 +250,7 @@ const RegisterForm = ({ onSubmit }) => {
                         });
                 }}
             >
-                {({ isSubmitting, setFieldValue, values, errors, isValid, dirty }) => (
+                {({ isSubmitting, setFieldValue, values, errors /*isValid, dirty*/ }) => (
                     <Form className={s.container} encType="multipart/form-data">
                         <div className={s.formContainer}>
                             <div className={s.left}>

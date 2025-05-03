@@ -1,0 +1,355 @@
+.container {
+    width: 872px;
+    padding: 8px 0;
+    background: white;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+  }
+  
+  .formHeader {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+  
+  .formDescription {
+    color: #6b7280;
+    font-size: 14px;
+    font-family: "Montserrat", sans-serif;
+    line-height: 1.5;
+  }
+  
+  .formTitle h1 {
+    color: #191919;
+    font-size: 26px;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 400;
+    line-height: 39px;
+    margin: 0 0 8px 0;
+  }
+  
+  .formTitle p {
+    color: #6b7280;
+    font-size: 16px;
+    font-family: "Montserrat", sans-serif;
+    line-height: 1.5;
+    margin: 0;
+  }
+  
+  .guideContainer {
+    margin-bottom: 24px;
+  }
+  
+  .guide {
+    border: 1px solid #e5e7eb;
+    border-radius: 8px;
+    overflow: hidden;
+  }
+  
+  .guideHeader {
+    background-color: #f9fafb;
+    padding: 12px 16px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #e5e7eb;
+  }
+  
+  .guideHeader h2 {
+    margin: 0;
+    font-size: 18px;
+    font-weight: 500;
+    color: #111827;
+  }
+  
+  .infoIcon {
+    color: #6b7280;
+  }
+  
+  .guideContent {
+    padding: 16px;
+    font-size: 14px;
+    color: #4b5563;
+    line-height: 1.5;
+  }
+  
+  .guideContent p {
+    margin-bottom: 16px;
+  }
+  
+  .guideContent strong {
+    color: #111827;
+  }
+  
+  .warning {
+    color: #b91c1c;
+    font-weight: 500;
+  }
+  
+  .form {
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+  }
+  
+  .formSection {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+  }
+  
+  .radioGroup,
+  .selectGroup,
+  .inputGroup,
+  .fieldGroup,
+  .keywordsGroup {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }
+  
+  .formLabel {
+    font-weight: 500;
+    color: #111827;
+    font-size: 14px;
+  }
+  
+  .formDescription {
+    color: #6b7280;
+    font-size: 14px;
+    margin-top: -4px;
+  }
+  
+  .radioOptions {
+    display: flex;
+    gap: 16px;
+  }
+  
+  .radioOption {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    cursor: pointer;
+  }
+  
+  .radioOption input[type="radio"] {
+    display: none;
+  }
+  
+  .radioIcon {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background-color: #2563eb;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .radioIconInactive {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    border: 1px solid #d1d5db;
+  }
+  
+  .selectWrapper {
+    position: relative;
+    width: 100%;
+    max-width: 724px;
+  }
+  
+  .select {
+    width: 100%;
+    padding: 10px 12px;
+    border: 1px solid #d1d5db;
+    border-radius: 6px;
+    font-size: 14px;
+    color: #111827;
+    background-color: white;
+    appearance: none;
+  }
+  
+  .selectIcon {
+    position: absolute;
+    right: 12px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #6b7280;
+    pointer-events: none;
+  }
+  
+  .titleInput {
+    width: 100%;
+    max-width: 724px;
+  }
+  
+  .textarea {
+    width: 100%;
+    padding: 10px 12px;
+    border: 1px solid #d1d5db;
+    border-radius: 6px;
+    font-size: 14px;
+    color: #111827;
+    min-height: 100px;
+    resize: vertical;
+  }
+  
+  .inlineFields {
+    display: flex;
+    gap: 24px;
+  }
+  
+  .inlineFields .selectGroup {
+    flex: 1;
+  }
+  
+  .dateInput {
+    position: relative;
+  }
+  
+  .calendarIcon {
+    position: absolute;
+    right: 12px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #6b7280;
+    pointer-events: none;
+  }
+  
+  .fieldOptions {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+  }
+  
+  .fieldOption {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    cursor: pointer;
+  }
+  
+  .fieldOption input[type="radio"] {
+    display: none;
+  }
+  
+  .fieldIcon {
+    width: 18px;
+    height: 18px;
+    border-radius: 4px;
+    background-color: #2563eb;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .fieldIconInactive {
+    width: 18px;
+    height: 18px;
+    border-radius: 4px;
+    border: 1px solid #d1d5db;
+  }
+  
+  .keywordsInput {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    max-width: 724px;
+  }
+  
+  .keywordsList {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    min-height: 40px;
+    padding: 8px;
+    border: 1px solid #d1d5db;
+    border-radius: 6px;
+  }
+  
+  .keywordTag {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    padding: 4px 8px;
+    background-color: #e5e7eb;
+    border-radius: 4px;
+    font-size: 14px;
+  }
+  
+  .removeKeyword {
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: #6b7280;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+  }
+  
+  .addKeyword {
+    display: flex;
+    gap: 8px;
+  }
+  
+  .keywordInput {
+    flex: 1;
+    padding: 8px 12px;
+    border: 1px solid #d1d5db;
+    border-radius: 6px;
+    font-size: 14px;
+  }
+  
+  .addKeywordButton {
+    padding: 8px 16px;
+    background-color: #2563eb;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    font-size: 14px;
+    cursor: pointer;
+  }
+  
+  .underline {
+    text-decoration: underline;
+  }
+  
+  .errorMessage {
+    color: #b91c1c;
+    font-size: 14px;
+    margin-top: 4px;
+  }
+  
+  .formActions {
+    display: flex;
+    justify-content: flex-end;
+    gap: 8px;
+    margin-top: 16px;
+  }
+  
+  .saveButton {
+    padding: 8px 16px;
+    background-color: white;
+    color: #2563eb;
+    border: none;
+    border-radius: 6px;
+    font-size: 14px;
+    text-decoration: underline;
+    cursor: pointer;
+  }
+  
+  .nextButton {
+    padding: 8px 16px;
+    background-color: #2563eb;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    font-size: 14px;
+    cursor: pointer;
+  }
+  

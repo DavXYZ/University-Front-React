@@ -1,10 +1,156 @@
 .container {
-    width: 872px;
-    padding: 8px 0;
-    background: white;
+    width: 100%;
+    min-height: 100vh;
     display: flex;
     flex-direction: column;
-    gap: 24px;
+    background-color: #ffffff;
+    font-family: "Montserrat", sans-serif;
+  }
+  
+  /* Secondary Navigation */
+  .secondaryNav {
+    width: 100%;
+    height: 48px;
+    background-color: #f9fafb;
+    border-bottom: 1px solid #e5e7eb;
+    display: flex;
+    align-items: center;
+    padding: 0 48px;
+  }
+  
+  .secondaryNavLinks {
+    display: flex;
+    gap: 32px;
+  }
+  
+  .secondaryNavItem {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    color: #4b5563;
+    font-size: 14px;
+    font-weight: 500;
+    cursor: pointer;
+    position: relative;
+  }
+  
+  .secondaryNavItem:hover {
+    color: #2563eb;
+  }
+  
+  .secondaryNavItem:after {
+    content: "";
+    position: absolute;
+    bottom: -16px;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background-color: transparent;
+    transition: background-color 0.2s ease;
+  }
+  
+  .secondaryNavItem:hover:after {
+    background-color: #2563eb;
+  }
+  
+  /* Progress Bar */
+  .progressBar {
+    width: 100%;
+    height: 56px;
+    background-color: #f3f4f6;
+    display: flex;
+    align-items: center;
+    padding: 0 48px;
+    border-bottom: 1px solid #e5e7eb;
+  }
+  
+  .progressIndicator {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    color: #111827;
+    font-size: 14px;
+    font-weight: 500;
+  }
+  
+  /* Banner */
+  .banner {
+    width: 100%;
+    height: auto;
+    overflow: hidden;
+  }
+  
+  .banner img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+  }
+  
+  /* Main Content */
+  .mainContent {
+    flex: 1;
+    padding: 32px 48px;
+  }
+  
+  .contentWrapper {
+    display: flex;
+    gap: 48px;
+    max-width: 1280px;
+    margin: 0 auto;
+  }
+  
+  /* Sidebar */
+  .sidebar {
+    width: 280px;
+    background-color: #f2f2f2;
+    border-radius: 8px;
+    overflow: hidden;
+  }
+  
+  .sidebarItem {
+    padding: 16px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-left: 4px solid transparent;
+    color: #4b5563;
+    font-size: 14px;
+    transition: all 0.2s ease;
+  }
+  
+  .sidebarItemActive {
+    border-left-color: #2563eb;
+    background-color: rgba(37, 99, 235, 0.05);
+    color: #2563eb;
+    font-weight: 500;
+  }
+  
+  .stepIndicator {
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    background-color: #ffffff;
+    border: 1px solid #d1d5db;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #6b7280;
+    font-size: 12px;
+    font-weight: 500;
+  }
+  
+  .stepActive {
+    background-color: #2563eb;
+    border-color: #2563eb;
+    color: #ffffff;
+  }
+  
+  /* Form Container */
+  .formContainer {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
   }
   
   .formHeader {
@@ -16,29 +162,28 @@
   .formDescription {
     color: #6b7280;
     font-size: 14px;
-    font-family: "Montserrat", sans-serif;
     line-height: 1.5;
+    max-width: 724px;
   }
   
   .formTitle h1 {
-    color: #191919;
-    font-size: 26px;
-    font-family: "Montserrat", sans-serif;
-    font-weight: 400;
-    line-height: 39px;
+    color: #111827;
+    font-size: 24px;
+    font-weight: 600;
     margin: 0 0 8px 0;
   }
   
   .formTitle p {
     color: #6b7280;
     font-size: 16px;
-    font-family: "Montserrat", sans-serif;
     line-height: 1.5;
     margin: 0;
+    max-width: 724px;
   }
   
+  /* Guide Container */
   .guideContainer {
-    margin-bottom: 24px;
+    max-width: 724px;
   }
   
   .guide {
@@ -58,7 +203,7 @@
   
   .guideHeader h2 {
     margin: 0;
-    font-size: 18px;
+    font-size: 16px;
     font-weight: 500;
     color: #111827;
   }
@@ -87,10 +232,12 @@
     font-weight: 500;
   }
   
+  /* Form */
   .form {
     display: flex;
     flex-direction: column;
     gap: 32px;
+    max-width: 724px;
   }
   
   .formSection {
@@ -99,6 +246,7 @@
     gap: 24px;
   }
   
+  /* Form Elements */
   .radioGroup,
   .selectGroup,
   .inputGroup,
@@ -351,5 +499,43 @@
     border-radius: 6px;
     font-size: 14px;
     cursor: pointer;
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 1024px) {
+    .contentWrapper {
+      flex-direction: column;
+    }
+  
+    .sidebar {
+      width: 100%;
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .secondaryNav,
+    .progressBar {
+      padding: 0 24px;
+    }
+  
+    .mainContent {
+      padding: 24px;
+    }
+  
+    .inlineFields {
+      flex-direction: column;
+      gap: 16px;
+    }
+  }
+  
+  @media (max-width: 640px) {
+    .secondaryNavLinks {
+      gap: 16px;
+    }
+  
+    .radioOptions {
+      flex-direction: column;
+      gap: 8px;
+    }
   }
   

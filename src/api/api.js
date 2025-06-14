@@ -121,6 +121,124 @@ export const authApi = {
 //     }
 // };
 
+// export const articleApplicationApi = {
+//     async sendArticleApplication(formData){
+//         try {
+//             console.log(formData);
+            
+//             const response = await instance.post(`/art_app/article-applications`,{formData})
+//             debugger
+//             return response.data;
+//         } catch (error) {
+//             console.error("Error sending Application: ",error);
+//         }
+//     }
+// }
+// Updated file upload API
+
+
+
+
+export const articleApplicationApi = {
+  async sendArticleApplication(formData, files = []) {
+    try {
+      // Create FormData for multipart submission
+      const submitData = new FormData()
+
+      // Add form data as JSON
+      const applicationData = {
+        basicInfo: formData.basicInfo,
+        authorInfo: formData.authorInfo,
+        reviewSubmit: formData.reviewSubmit,
+      }
+
+      submitData.append("formData", JSON.stringify(applicationData))
+
+      // Add each file individually to FormData
+      // This is crucial for the backend to receive files in req.files
+      if (files && files.length > 0) {
+        files.forEach((file, index) => {
+          // If file is an object with actual file data
+          if (file.file) {
+            submitData.append("article_files", file.file, file.name || `file-${index}.${file.type.split("/")[1]}`)
+          }
+          // If file is already a File object
+          else if (file instanceof File) {
+            submitData.append("article_files", file, file.name)
+          }
+          // If we have metadata but need to get the file from somewhere else
+          else if (file.uploadedUrl) {
+            // Add metadata about the already uploaded file
+            submitData.append(
+              "uploaded_files",
+              JSON.stringify({
+                id: file.id || file.serverId,
+                name: file.name,
+                url: file.uploadedUrl,
+                type: file.type,
+                size: file.size,
+              }),
+            )
+          }
+        })
+      }
+
+      // If using axios instance
+      const response = await instance.post("/art_app/article-applications", submitData, {
+        headers: {
+          "Content-Type": "multipart/form-data",
+        },
+        withCredentials: true,
+        onUploadProgress: (progressEvent) => {
+          const percentCompleted = Math.round((progressEvent.loaded * 100) / progressEvent.total)
+          // This will be handled by the thunk
+          return percentCompleted
+        },
+      })
+
+      return response.data
+    } catch (error) {
+      console.error("Error sending Application: ", error)
+      throw error
+    }
+  },
+
+  // New method to search for authors by email
+  async searchAuthorByEmail(email) {
+    try {
+      const response = await instance.get(`/auth/search-author`, {
+        params: { email },
+        withCredentials: true,
+      })
+      
+      return response.data
+    } catch (error) {
+      console.error("Error searching for author:", error)
+      throw error
+    }
+  },
+
+  // Alternative method to search by multiple criteria
+  async searchAuthors(searchQuery) {
+    try {
+      const response = await instance.get(`/auth/search-authors`, {
+        params: { 
+          query: searchQuery,
+          role: 'author' // Only search for users with author role
+        },
+        withCredentials: true,
+      })
+      
+      return response.data
+    } catch (error) {
+      console.error("Error searching for authors:", error)
+      throw error
+    }
+  }
+}
+
+
+
 
 // In your api.js
 export const googleAuthApi = {

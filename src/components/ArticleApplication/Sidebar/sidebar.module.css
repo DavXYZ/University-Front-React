@@ -1,0 +1,115 @@
+.sidebar {
+    width: 340px;
+    position: relative;
+
+  }
+
+  .sidebarContent{
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    background-color: #f2f2f2;
+  }
+  
+  .sidebarItem {
+    width: 100%;
+    padding: 16px 32px;
+    background: #f2f2f2;
+    display: inline-flex; /* Changed from flex to inline-flex */
+    justify-content: flex-start; /* Matches your desired layout */
+    align-items: center;
+  }
+  
+  .itemContent {
+    width: 216px; /* Fixed width to match example */
+    color: #2d2d2d;
+    background: #f2f2f2;
+    font-size: 14px;
+    font-family: "Montserrat", sans-serif; /* If you're using "Montserrat arm", load it */
+    font-weight: 400;
+    word-wrap: break-word;
+  }
+
+  
+  .sidebarItem.active {
+    border-left: 4px solid black;
+  }
+  
+
+  .stepIndicators {
+    width: 24px;
+    height: 240px;
+    position: absolute;
+    right: 0;
+    top: 0;
+    background: #f2f2f2;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    padding-top: 12px;
+    align-items: center;   
+    
+}
+
+.stepIndicators::before {
+  content: "";
+  position: absolute;
+  top: 24px; /* start under first indicator */
+  bottom: 24px; /* end before last indicator */
+  left: 50%;
+  transform: translateX(-50%);
+  width: 2px;
+  background-image: repeating-linear-gradient(
+      to bottom,
+      #919bac,
+      #919bac 4px,
+      transparent 4px,
+      transparent 8px
+  );
+  z-index: 0;
+}
+
+/* Default number (future step) */
+.indicator {
+  width: 24px;
+  height: 24px;
+  border-radius: 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: white;
+  outline: 1px gray solid;
+  position: relative;
+  z-index: 1;
+}
+
+.indicatorNumber {
+  color: gray;
+  font-size: 13px;
+  font-family: "Montagu Slab", serif;
+  font-weight: 500;
+}
+
+/* Completed step */
+.indicator.completed {
+  background: #E6F4FF;
+}
+
+.indicator.completed .indicatorNumber {
+    font-size: 16px;
+    color: #0C62FF;
+}
+
+/* Current step special styles */
+/* Current step special styles */
+.indicator.current {
+  background: #0C62FF;
+  outline: 1px #0C62FF solid;
+
+}
+
+.indicator.current .indicatorNumber {
+  color: white;
+}
+
+

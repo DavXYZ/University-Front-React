@@ -1,10 +1,11 @@
 
-import styles from "../ArticleApplication/ArticleApplication.module.css"
+import styles from "../ArticleApplication/ArticleSubmission/ArticleApplication.module.css"
 import Header from "../common/Header"
 import LearnMore from "../common/LearnMore"
 import Footer from "../common/Footer"
-import ArticleSubmission from "../ArticleApplication/article-submission"
-import NavBar from "../common/Navbar"
+
+import NavBar from "../common/NavBar"
+import ArticleSubmissionContainer from "../ArticleApplication/ArticleSubmission/article-submission.container"
 
 export default function ArticleSubmissionPage() {
   return (
@@ -29,7 +30,7 @@ export default function ArticleSubmissionPage() {
           <div>Ներկայացման առաջընթաց</div>
         </div>
       </div>
-      <ArticleSubmission />
+      <ArticleSubmissionContainer />
       <LearnMore />
       <Footer />
     </div>

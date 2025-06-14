@@ -1,0 +1,87 @@
+.hintContainer {
+  width: 100%;
+  height: 100%;
+  padding: 8px;
+  position: relative;
+  background: white;
+  overflow: hidden;
+  outline: 1px solid #9CA3AF;
+  outline-offset: -1px;
+  display: inline-flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  margin: 16px 0;
+}
+
+.hintHeader {
+  width: 100%;
+  padding: 4px 8px;
+  background: white;
+  display: inline-flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 458px;
+}
+
+.hintContent {
+  width: 100%;
+  align-self: stretch;
+  display: inline-flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 8px;
+}
+
+.hintTitle {
+  color: #202224;
+  font-size: 18px;
+  font-family: 'Montserrat arm', sans-serif;
+  font-weight: 500;
+  line-height: 32.4px;
+  word-wrap: break-word;
+}
+
+.hintText {
+  color: #202224;
+  font-size: 16px;
+  font-family: 'Montserrat arm', sans-serif;
+  font-weight: 400;
+  line-height: 24px;
+  word-wrap: break-word;
+}
+
+.hintFooter {
+  display: inline-flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  gap: 8px;
+}
+
+.hintBullet {
+  width: 24px;
+  height: 24px;
+  background: #D9D9D9;
+}
+
+.hintImportant {
+  color: #2563EB;
+  font-size: 14px;
+  font-family: 'Montserrat arm', sans-serif;
+  font-weight: 500;
+  line-height: 21px;
+  word-wrap: break-word;
+}
+
+.hintClose {
+  width: 14px;
+  height: 14px;
+  position: absolute;
+  right: 8px;
+  top: 8px;
+  background: #566780;
+  outline: 1px solid #566780;
+  outline-offset: -0.5px;
+  cursor: pointer;
+}

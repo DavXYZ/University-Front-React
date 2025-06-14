@@ -1,0 +1,453 @@
+.container {
+  width: 100%;
+  max-width: 872px;
+  margin: 0 auto;
+  background-color: white;
+}
+
+.formHeader {
+  margin-bottom: 2rem;
+}
+
+.formDescription {
+  color: #191919;
+  font-size: 0.75rem;
+  line-height: 1.125rem;
+  font-weight: normal;
+  margin-bottom: 1rem;
+}
+
+.formTitle h1 {
+  color: #191919;
+  font-size: 1.625rem;
+  line-height: 2.438rem;
+  font-weight: normal;
+}
+
+.formTitle p {
+  color: #6b7280;
+  font-size: 0.875rem;
+  line-height: 1.313rem;
+  font-weight: normal;
+  max-width: 724px;
+}
+
+.guideContainer {
+  margin-bottom: 3.5rem;
+}
+
+.guide {
+  width: 100%;
+  max-width: 744px;
+
+  background-color: #f7faff;
+  border: 1px solid #5f8fee;
+  border-radius: 0.5rem;
+  padding: 2rem;
+  position: relative;
+}
+
+.guideHeader {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 2rem;
+}
+
+.guideHeader h2 {
+  color: black;
+  font-size: 1rem;
+  font-weight: 500;
+  margin-right: 0.5rem;
+}
+
+.infoIcon {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  background-color: #3371ea;
+  color: white;
+  border-radius: 50%; /* optional for circle background */
+  
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+
+.guideContent {
+  font-size: 0.875rem;
+  line-height: 1.313rem;
+}
+
+.guideContent p {
+  margin-bottom: 1rem;
+}
+
+.guideContent strong {
+  font-weight: bold;
+  color: black;
+}
+
+
+
+.warning {
+  color: #b83232;
+  font-weight: normal;
+}
+
+.form {
+  opacity: 0.8;
+}
+
+.formSection {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.radioGroup {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.formLabel {
+  color: #191919;
+  font-size: 0.875rem;
+  line-height: 1.313rem;
+  font-weight: normal;
+  display: block;
+  margin-bottom: 0.75rem;
+}
+
+.radioOptions {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.radioOption {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  cursor: pointer;
+}
+
+.radioInput {
+  position: absolute;
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.radioIcon {
+  background-color: #2563eb;
+  color: white;
+  border-radius: 50%;
+}
+
+.radioIconInactive {
+  width: 1.25rem;
+  height: 1.25rem;
+  border-radius: 50%;
+  border: 1px solid #b9bccb;
+}
+
+.radioOption span {
+  color: #191919;
+  font-size: 0.75rem;
+  font-weight: normal;
+}
+
+.selectGroup {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.selectGroup .formLabel {
+  color: #191919;
+  font-size: 1.25rem;
+  line-height: 1.875rem;
+  font-weight: normal;
+  margin-bottom: 0;
+}
+
+.formDescription {
+  color: #6b7280;
+  font-size: 0.875rem;
+  line-height: 1.313rem;
+  font-weight: normal;
+  margin-bottom: 0.5rem;
+}
+
+.selectWrapper {
+  position: relative;
+  width: 100%;
+  max-width: 724px;
+}
+
+.select {
+  width: 100%;
+  padding: 0.5rem;
+  border: 1px solid #d1d5db;
+  border-radius: 0.5rem;
+  color: #808080;
+  font-size: 0.875rem;
+  font-weight: 500;
+  appearance: none;
+}
+
+.selectIcon {
+  position: absolute;
+  right: 0.75rem;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #585858;
+}
+
+.errorMessage {
+  color: #ef4444;
+  font-size: 0.75rem;
+  margin-top: 0.25rem;
+}
+
+.inputGroup {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.inputGroup .formLabel {
+  color: #2d2d2d;
+  font-size: 1.25rem;
+  line-height: 1.875rem;
+  font-weight: normal;
+}
+
+.titleInput {
+  border: 1px solid #d1d5db;
+  border-radius: 0.5rem;
+  overflow: hidden;
+}
+
+.textarea {
+  width: 100%;
+  padding: 1.5rem;
+  background-color: #f5f5f5;
+  border-bottom: 1px solid #dddddd;
+  min-height: 108px;
+  resize: none;
+}
+
+.inlineFields {
+  display: flex;
+  gap: 1.5rem;
+}
+
+.inlineFields .selectGroup {
+  flex: 1;
+}
+
+.inlineFields .formLabel {
+  font-size: 0.875rem;
+  line-height: 1.313rem;
+}
+
+.dateInput {
+  position: relative;
+}
+
+.calendarIcon {
+  position: absolute;
+  right: 0.75rem;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #1c1b1f;
+}
+
+.fieldGroup {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.fieldGroup .formLabel {
+  color: #191919;
+  font-size: 1.25rem;
+  line-height: 1.875rem;
+  font-weight: normal;
+}
+
+.fieldOptions {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.fieldOption {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  cursor: pointer;
+}
+
+.fieldIcon {
+  color: #2563eb;
+}
+
+.fieldIconInactive {
+  width: 1.125rem;
+  height: 1.125rem;
+  border-radius: 50%;
+  border: 1px solid #919bac;
+}
+
+.fieldOption span {
+  color: black;
+  font-size: 1rem;
+  font-weight: normal;
+}
+
+
+.fieldContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 8px; /* equivalent to space-y-2 */
+}
+
+.fieldLabel {
+  display: block;
+  font-size: 0.875rem; /* 14px, text-sm */
+  font-weight: 500; /* medium */
+  color: #374151; /* text-gray-700 */
+}
+
+.fieldDescription {
+  font-size: 0.875rem; /* 14px, text-sm */
+  color: #6b7280; /* text-gray-500 */
+}
+
+.fieldDropdown {
+  border: 1px solid #d1d5db; /* border-gray-300 */
+  border-radius: 0.375rem; /* rounded-md */
+  background-color: #ffffff; /* bg-white */
+  max-height: 24rem; /* max-h-96 */
+  overflow-y: auto;
+}
+
+.fieldError {
+  font-size: 0.875rem; /* 14px, text-sm */
+  color: #dc2626; /* text-red-600 */
+}
+
+.keywordsGroup {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.keywordsGroup .formLabel {
+  color: #191919;
+  font-size: 1.25rem;
+  line-height: 1.875rem;
+  font-weight: normal;
+}
+
+.underline {
+  text-decoration: underline;
+}
+
+.keywordsInput {
+  border-bottom: 1px solid #49494d;
+  padding-bottom: 1.5rem;
+}
+
+.keywordsList {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+.keywordTag {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.25rem 0.5rem;
+  border: 1px solid black;
+  border-radius: 0.25rem;
+}
+
+.keywordTag span {
+  color: #141414;
+  font-size: 0.875rem;
+  font-weight: 500;
+}
+
+.removeKeyword {
+  color: #b9bccb;
+  background: none;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.addKeyword {
+  display: flex;
+  gap: 1rem;
+}
+
+.keywordInput {
+  flex: 1;
+  padding: 0.5rem;
+  border: 1px solid #d1d5db;
+  border-radius: 0.5rem;
+}
+
+.addKeywordButton {
+  padding: 0.5rem 1rem;
+  background-color: #2563eb;
+  color: white;
+  border: none;
+  border-radius: 0.5rem;
+  font-size: 0.875rem;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+.formActions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 0.5rem;
+  margin-top: 2rem;
+}
+
+.saveButton {
+  width: 150px;
+  height: 40px;
+  padding: 0.5rem 1rem;
+  border: 1px solid #9ca3af;
+  border-radius: 0.5rem;
+  color: #202224;
+  font-size: 0.875rem;
+  font-weight: 500;
+  background-color: white;
+  cursor: pointer;
+}
+
+.nextButton {
+  width: 150px;
+  height: 40px;
+  padding: 0.5rem 1rem;
+  background-color: #2563eb;
+  border: 1px solid #dcdde5;
+  border-radius: 0.5rem;
+  color: white;
+  font-size: 0.875rem;
+  font-weight: 500;
+  cursor: pointer;
+}

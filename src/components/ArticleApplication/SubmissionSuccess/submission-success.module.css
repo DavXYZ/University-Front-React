@@ -1,0 +1,176 @@
+.container {
+    width: 100%;
+    height: 100%;
+    padding-bottom: 40px;
+    position: relative;
+    background: white;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .content {
+    width: 100%;
+    max-width: 1000px;
+    position: relative;
+    padding: 40px 0;
+  }
+  
+  .headerSection {
+    width: 100%;
+    max-width: 922px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 16px;
+  }
+  
+  .title {
+    width: 100%;
+    max-width: 718px;
+    text-align: center;
+    color: #2d2d2d;
+    font-size: 24px;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 500;
+    margin: 0;
+  }
+  
+  .subtitle {
+    width: 100%;
+    max-width: 660px;
+    text-align: center;
+    color: #4b4b4b;
+    font-size: 16px;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 400;
+    line-height: 24px;
+    margin: 0;
+  }
+  
+  .imageContainer {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin: 40px 0;
+  }
+  
+  .successImage {
+    width: 606px;
+    height: 411px;
+    object-fit: contain;
+  }
+  
+  .infoSection {
+    width: 100%;
+    max-width: 653px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+  
+  .processingInfo {
+    width: 100%;
+    max-width: 640px;
+  }
+  
+  .processingTitle {
+    color: black;
+    font-size: 20px;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 400;
+    line-height: 30px;
+    margin: 0 0 8px 0;
+  }
+  
+  .processingText {
+    color: black;
+    font-size: 16px;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 400;
+    line-height: 24px;
+    margin: 0;
+  }
+  
+  .thankYou {
+    color: black;
+    font-size: 18px;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 400;
+    margin: 0;
+  }
+  
+  .contactInfo {
+    width: 100%;
+    max-width: 640px;
+    color: black;
+    font-size: 14px;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 400;
+    line-height: 25.2px;
+    margin: 0;
+  }
+  
+  @media (max-width: 1024px) {
+    .content {
+      padding: 40px 20px;
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .successImage {
+      width: 100%;
+      height: auto;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .title {
+      font-size: 20px;
+    }
+  
+    .subtitle {
+      font-size: 14px;
+    }
+  
+    .processingTitle {
+      font-size: 18px;
+    }
+  
+    .processingText {
+      font-size: 14px;
+    }
+  }
+  
+
+  /* Add these styles to your existing CSS file */
+.newSubmissionContainer {
+  margin-top: 2rem;
+  text-align: center;
+}
+
+.newSubmissionButton {
+  background-color: #2563eb;
+  color: white;
+  font-weight: 600;
+  padding: 0.75rem 1.5rem;
+  border-radius: 0.375rem;
+  border: none;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: background-color 0.2s;
+}
+
+.newSubmissionButton:hover {
+  background-color: #1d4ed8;
+}
+
+.newSubmissionButton:focus {
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.5);
+}

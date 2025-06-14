@@ -279,7 +279,7 @@ export const googleLoginThunk = (authCode, navigate) => async (dispatch) => {
         
         dispatch({ type: 'SET_LOADING', payload: true });
         const res = await googleAuthApi.googleAuth(authCode);
-        debugger
+
         if (res.resultCode === 0) {
             
             // Existing user - authenticate normally

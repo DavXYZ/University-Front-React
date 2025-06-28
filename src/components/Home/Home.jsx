@@ -1,5 +1,5 @@
 import Header from "../common/Header";
-import NavBar from "../common/Navbar";
+import NavBar from "../common/NavBar";
 import SearchEvents from "../common/SearchEvents";
 import FullWidthImage from "./FullWidthImage";
 import RecommendedEvents from "./RecommendedEvents";

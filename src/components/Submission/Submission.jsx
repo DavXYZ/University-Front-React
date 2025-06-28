@@ -1,6 +1,6 @@
 import Footer from "../common/Footer";
 import Header from "../common/Header";
-import NavBar from "../common/Navbar";
+import NavBar from "../common/NavBar";
 
 function Submission() {
     return (

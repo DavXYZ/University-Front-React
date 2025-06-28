@@ -7,6 +7,7 @@ const FileContext = createContext()
 export const FileProvider = ({ children }) => {
   // Use useRef to persist File objects across re-renders and navigation
   const fileObjectsRef = useRef(new Map())
+  const fileInputRef = useRef(null) // ✅ Add this
   const [fileMetadata, setFileMetadata] = useState([])
 
   // Add File objects and metadata
@@ -77,6 +78,7 @@ export const FileProvider = ({ children }) => {
   }, [fileMetadata])
 
   const value = {
+    fileInputRef, // ✅ expose ref
     addFiles,
     removeFile,
     getFileObject,

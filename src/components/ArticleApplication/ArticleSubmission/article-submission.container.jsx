@@ -1,9 +1,10 @@
 "use client"
 import { useEffect } from "react"
 import SubmissionSuccess from "../SubmissionSuccess/submission-success"
-import { setCurrentStep, loadFormDraft, saveFormDraft } from "../../../redux/reducers/article-submission-reducer"
+import { setCurrentStep, loadFormDraft, saveFormDraft } from "@/redux/reducers/article-submission-reducer.js"
 import ArticleSubmission from "./article-submission"
 import { connect } from "react-redux"
+import {FileProvider} from "@/contexts/file-context.jsx";
 
 const ArticleSubmissionContainer = ({setCurrentStep, loadFormDraft, saveFormDraft,currentStep,isSubmitted}) => {
 
@@ -49,12 +50,14 @@ const ArticleSubmissionContainer = ({setCurrentStep, loadFormDraft, saveFormDraf
   }
 
   return (
+      <FileProvider>
     <ArticleSubmission 
-    handleNext={handleNext}
-    handlePrev={handlePrev}
+    handleNextFN={handleNext}
+    handlePrevFN={handlePrev}
     handleSubmit={handleSubmit}
     currentStep={currentStep}
     />
+      </FileProvider>
   )
 }
 

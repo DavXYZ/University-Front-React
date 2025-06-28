@@ -1,468 +1,364 @@
 .container {
-    width: 872px;
-    padding: 8px 0;
-    background: white;
-    display: flex;
-    flex-direction: column;
-    gap: 32px;
-  }
-  
-  .header {
-    display: flex;
-    flex-direction: column;
-    gap: 8px;
-  }
-  
-  .title {
-    color: #191919;
-    font-size: 26px;
-    font-family: "Montserrat", sans-serif;
-    font-weight: 400;
-    line-height: 39px;
-    margin: 0;
-  }
-  
-  .subtitle {
-    color: #6b7280;
-    font-size: 16px;
-    font-family: "Montserrat", sans-serif;
-    font-weight: 400;
-    line-height: 24px;
-    margin: 0;
-  }
-  
-  .description {
-    color: #6b7280;
-    font-size: 14px;
-    font-family: "Montserrat", sans-serif;
-    font-weight: 400;
-    line-height: 21px;
-    max-width: 724px;
-    margin: 0;
-  }
-  
-  .uploadSection {
-    display: flex;
-    flex-direction: column;
-    gap: 28px;
-    max-width: 576px;
-  }
-  
-  .uploadInstruction {
-    color: #707386;
-    font-size: 16px;
-    font-family: "Montserrat", sans-serif;
-    font-weight: 400;
-    line-height: 24px;
-    margin: 0;
-  }
-  
-  .dropZone {
-    height: 205px;
-    background: #f7faff;
-    border-radius: 8px;
-    border: 1px solid #5f8fee;
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    gap: 16px;
-  }
-  
-  .uploadIcon {
-    width: 66px;
-    height: 66px;
-    background: #d9d9d9;
-    position: relative;
-  }
-  
-  .uploadIcon::after {
-    content: "";
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 60.5px;
-    height: 43.93px;
-    background: #2563eb;
-  }
-  
-  .uploadText {
-    color: black;
-    font-size: 20px;
-    font-family: "Montserrat", sans-serif;
-    font-weight: 400;
-    line-height: 30px;
-  }
-  
-  .uploadLink {
-    color: #2563eb;
-    text-decoration: underline;
-    cursor: pointer;
-    margin-left: 5px;
-  }
-  
-  .uploadLimit {
-    color: #707386;
-    font-size: 14px;
-    font-family: "Montserrat", sans-serif;
-    font-weight: 400;
-    line-height: 21px;
-    margin: 0;
-  }
-  
-  .uploadedFiles {
-    display: flex;
-    flex-direction: column;
-    gap: 16px;
-  }
-  
-  .uploadedTitle {
-    color: black;
-    font-size: 18px;
-    font-family: "Montserrat", sans-serif;
-    font-weight: 500;
-    line-height: 27px;
-    margin: 0;
-  }
-  
-  .fileItem {
-    height: 62px;
-    padding: 0 16px;
-    background: white;
-    border-radius: 8px;
-    border: 1px solid #f3f3f7;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-  }
-  
-  .filePreview {
-    width: 177px;
-    height: 50px;
-    background: #f0f0f0;
-  }
-  
-  .fileProgress {
-    color: #444860;
-    font-size: 14px;
-    font-family: "Montserrat", sans-serif;
-    font-weight: 500;
-    line-height: 21px;
-  }
-  
-  .fileActions {
-    width: 24px;
-    height: 24px;
-  }
-  
-  .uploadButtons {
-    display: flex;
-    gap: 32px;
-  }
-  
-  .cancelButton {
-    width: 272px;
-    height: 48px;
-    padding: 8px;
-    background: white;
-    border-radius: 8px;
-    border: 1px solid #d1d5db;
-    color: black;
-    font-size: 14px;
-    font-family: "Montserrat", sans-serif;
-    font-weight: 500;
-    line-height: 21px;
-    cursor: pointer;
-  }
-  
-  .attachButton {
-    width: 272px;
-    height: 48px;
-    padding: 8px;
-    background: #2563eb;
-    border-radius: 8px;
-    border: none;
-    color: #f9fbfe;
-    font-size: 14px;
-    font-family: "Montserrat", sans-serif;
-    font-weight: 500;
-    line-height: 21px;
-    cursor: pointer;
-  }
-  
-  .formSection {
-    display: flex;
-    flex-direction: column;
-    gap: 8px;
-    opacity: 0.8;
-  }
-  
-  .sectionTitle {
-    color: #191919;
-    font-size: 20px;
-    font-family: "Montserrat", sans-serif;
-    font-weight: 400;
-    line-height: 30px;
-    margin: 0;
-  }
-  
-  .sectionDescription {
-    color: #6b7280;
-    font-size: 14px;
-    font-family: "Montserrat", sans-serif;
-    font-weight: 400;
-    line-height: 21px;
-    max-width: 724px;
-    margin: 0;
-  }
-  
-  .selectWrapper {
-    position: relative;
-    width: 100%;
-    max-width: 724px;
-  }
-  
-  .select {
-    width: 100%;
-    padding: 8px;
-    background: white;
-    border-radius: 8px;
-    border: 1px solid #d1d5db;
-    color: #808080;
-    font-size: 14px;
-    font-family: "Montserrat", sans-serif;
-    font-weight: 500;
-    line-height: 21px;
-    appearance: none;
-  }
-  
-  .selectIcon {
-    position: absolute;
-    right: 8px;
-    top: 50%;
-    transform: translateY(-50%);
-    pointer-events: none;
-  }
-  
-  .inputField {
-    width: 100%;
-    max-width: 724px;
-  }
-  
-  .input {
-    width: 100%;
-    padding: 8px;
-    background: white;
-    border-radius: 8px;
-    border: 1px solid #d1d5db;
-    color: #191919;
-    font-size: 16px;
-    font-family: "Montserrat", sans-serif;
-    font-weight: 400;
-    line-height: 24px;
-  }
-  
-  .inlineFields {
-    display: flex;
-    gap: 24px;
-  }
-  
-  .fieldGroup {
-    display: flex;
-    flex-direction: column;
-    gap: 8px;
-  }
-  
-  .fieldLabel {
-    color: #191919;
-    font-size: 14px;
-    font-family: "Montserrat", sans-serif;
-    font-weight: 400;
-    line-height: 21px;
-  }
-  
-  .dateInput {
-    width: 229px;
-  }
-  
-  .underline {
-    text-decoration: underline;
-  }
-  
-  .keywordsContainer {
-    width: 724px;
-    height: 108px;
-    background: white;
-    border-bottom: 1px solid #49494d;
-    position: relative;
-    padding: 8px;
-  }
-  
-  .keywordTag {
-    position: absolute;
-    top: 44px;
-    left: 8px;
-    padding: 8px;
-    border-radius: 4px;
-    border: 1px solid black;
-    color: #141414;
-    font-size: 14px;
-    font-family: "Montserrat", sans-serif;
-    font-weight: 500;
-    line-height: 21px;
-  }
-  
-  .categoryOptions {
-    display: flex;
-    flex-direction: column;
-    gap: 8px;
-    padding: 8px;
-  }
-  
-  .categoryOption {
-    display: flex;
-    align-items: center;
-    gap: 8px;
-  }
-  
-  .categoryCheckbox {
-    width: 18px;
-    height: 18px;
-    background: #2563eb;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
-  
-  .categoryCheckboxInactive {
-    width: 18px;
-    height: 18px;
-    background: #919bac;
-  }
-  
-  .checkIcon {
-    color: white;
-  }
-  
-  .authorCard {
-    width: 100%;
-    height: 136px;
-    padding: 12px 16px;
-    background: white;
-    border: 1px solid #d1d5db;
-    display: flex;
-    align-items: flex-start;
-  }
-  
-  .authorInfo {
-    flex: 1;
-    display: flex;
-    flex-direction: column;
-    gap: 16px;
-  }
-  
-  .authorName {
-    color: #191919;
-    font-size: 16px;
-    font-family: "Montserrat", sans-serif;
-    font-weight: 400;
-    line-height: 24px;
-  }
-  
-  .authorDetails {
-    display: flex;
-    justify-content: space-between;
-    padding: 0 72px;
-  }
-  
-  .detailsLeft,
-  .detailsRight {
-    font-size: 14px;
-    font-family: "Montserrat", sans-serif;
-    line-height: 21px;
-    color: #191919;
-  }
-  
-  .detailsLeft p,
-  .detailsRight p {
-    margin: 0;
-  }
-  
-  .termsText {
-    color: #191919;
-    font-size: 14px;
-    font-family: "Montserrat", sans-serif;
-    font-weight: 400;
-    line-height: 21px;
-    max-width: 724px;
-  }
-  
-  .termsCheckbox {
-    display: flex;
-    align-items: center;
-    gap: 16px;
-    padding: 8px;
-    background: white;
-    border-radius: 4px;
-    border: 1px solid #d1d5db;
-  }
-  
-  .checkbox {
-    width: 18px;
-    height: 18px;
-    background: #2563eb;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    cursor: pointer;
-  }
-  
-  .checkboxLabel {
-    color: #191919;
-    font-size: 14px;
-    font-family: "Montserrat", sans-serif;
-    font-weight: 400;
-    line-height: 21px;
-    margin: 0;
-    flex: 1;
-  }
-  
-  .actionButtons {
-    display: flex;
-    gap: 8px;
-    justify-content: flex-end;
-    margin-top: auto;
-  }
-  
-  .prevButton {
-    width: 150px;
-    height: 40px;
-    padding: 8px;
-    background: white;
-    border-radius: 8px;
-    border: 1px solid #dcdde5;
-    color: #202224;
-    font-size: 14px;
-    font-family: "Montserrat", sans-serif;
-    font-weight: 500;
-    line-height: 21px;
-    cursor: pointer;
-  }
-  
-  .submitButton {
-    width: 150px;
-    height: 40px;
-    padding: 8px;
-    background: #2563eb;
-    border-radius: 8px;
-    border: none;
-    color: white;
-    font-size: 14px;
-    font-family: "Montserrat", sans-serif;
-    font-weight: 500;
-    line-height: 21px;
-    cursor: pointer;
-  }
-  
+  width: 100%;
+  height: 100%;
+  padding-bottom: 56px;
+  background: white;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+
+.header {
+  background: white;
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  gap: 148px;
+}
+
+.title {
+  color: #191919;
+  font-size: 26px;
+  font-family: 'Montserrat arm', sans-serif;
+  font-weight: 400;
+  line-height: 39px;
+}
+
+.subtitle {
+  color: #6B7280;
+  font-size: 16px;
+  font-family: 'Montserrat arm', sans-serif;
+  font-weight: 400;
+  line-height: 24px;
+}
+
+.description {
+  width: 724px;
+  color: #6B7280;
+  font-size: 14px;
+  font-family: 'Montserrat arm', sans-serif;
+  font-weight: 400;
+  line-height: 21px;
+}
+
+.form {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+
+.uploadSection {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.uploadedTitle {
+  color: #191919;
+  font-size: 18px;
+  font-family: 'Montserrat arm', sans-serif;
+  font-weight: 500;
+  line-height: 27px;
+}
+
+.warningMessage {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: #CD0508;
+  font-size: 14px;
+  font-family: 'Montserrat arm', sans-serif;
+}
+
+.fileItem {
+  width: 100%;
+  height: 62px;
+  padding: 0 16px;
+  background: white;
+  border-radius: 8px;
+  outline: 1px solid #F3F3F7;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.filePreview {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.fileThumbnail {
+  font-size: 24px;
+}
+
+.fileName {
+  display: flex;
+  flex-direction: column;
+}
+
+.fileNameText {
+  color: #444860;
+  font-size: 14px;
+  font-family: 'Montserrat arm', sans-serif;
+  font-weight: 500;
+  line-height: 21px;
+}
+
+.fileSize {
+  color: #707386;
+  font-size: 12px;
+  font-family: 'Montserrat arm', sans-serif;
+}
+
+.uploadProgress {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.progressBar {
+  width: 100px;
+  height: 4px;
+  background: #E5E7EB;
+  border-radius: 2px;
+  overflow: hidden;
+}
+
+.progressFill {
+  height: 100%;
+  background: #0C62FF;
+}
+
+.uploadError {
+  color: #CD0508;
+  font-size: 12px;
+  font-family: 'Montserrat arm', sans-serif;
+}
+
+.fileStatus {
+  color: #707386;
+  font-size: 12px;
+  font-family: 'Montserrat arm', sans-serif;
+}
+
+.formSection {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.sectionTitle {
+  color: #191919;
+  font-size: 20px;
+  font-family: 'Montserrat arm', sans-serif;
+  font-weight: 400;
+  line-height: 30px;
+}
+
+.inputField {
+  width: 100%;
+}
+
+.input {
+  width: 100%;
+  padding: 8px;
+  background: white;
+  border-radius: 8px;
+  outline: 1px solid #D1D5DB;
+  color: #191919;
+  font-size: 14px;
+  font-family: 'Montserrat arm', sans-serif;
+  font-weight: 400;
+  line-height: 21px;
+}
+
+.inlineFields {
+  display: flex;
+  gap: 24px;
+}
+
+.fieldGroup {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.fieldLabel {
+  color: #191919;
+  font-size: 14px;
+  font-family: 'Montserrat arm', sans-serif;
+  font-weight: 400;
+  line-height: 21px;
+}
+
+.keywordsContainer {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.keywordTag {
+  padding: 4px 8px;
+  background: #F3F4F6;
+  border-radius: 4px;
+  color: #4B5563;
+  font-size: 14px;
+  font-family: 'Montserrat arm', sans-serif;
+}
+
+.categoryDisplay {
+  padding: 8px;
+  background: white;
+  border-radius: 8px;
+  outline: 1px solid #D1D5DB;
+}
+
+.selectedCategory {
+  color: #191919;
+  font-size: 14px;
+  font-family: 'Montserrat arm', sans-serif;
+}
+
+.authorCard {
+  width: 100%;
+  height: 136px;
+  padding: 12px 16px;
+  background: white;
+  outline: 1px solid #D1D5DB;
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+
+.authorInfo {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.authorName {
+  color: #191919;
+  font-size: 16px;
+  font-family: 'Montserrat arm', sans-serif;
+  font-weight: 400;
+  line-height: 24px;
+}
+
+.authorDetails {
+  display: flex;
+  justify-content: space-between;
+  padding: 0 72px;
+}
+
+.detailsLeft,
+.detailsRight {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  color: #191919;
+  font-size: 14px;
+  font-family: 'Montserrat arm', sans-serif;
+}
+
+.termsText {
+  color: #191919;
+  font-size: 14px;
+  font-family: 'Montserrat arm', sans-serif;
+  font-weight: 400;
+  line-height: 21px;
+}
+
+.termsCheckbox {
+  display: flex;
+  align-items: flex-start;
+  gap: 16px;
+  padding: 8px;
+  background: white;
+  border-radius: 4px;
+  outline: 1px solid #D1D5DB;
+}
+
+.checkbox {
+  width: 24px;
+  height: 24px;
+  background: #D9D9D9;
+  border-radius: 4px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+.checkIcon {
+  color: #0C62FF;
+}
+
+.checkboxLabel {
+  flex: 1;
+  color: #191919;
+  font-size: 14px;
+  font-family: 'Montserrat arm', sans-serif;
+  font-weight: 400;
+  line-height: 21px;
+}
+
+.errorMessage {
+  color: #CD0508;
+  font-size: 12px;
+  font-family: 'Montserrat arm', sans-serif;
+}
+
+.actionButtons {
+  display: flex;
+  justify-content: flex-end;
+  gap: 8px;
+}
+
+.prevButton {
+  min-width: 150px;
+  min-height: 40px;
+  padding: 8px;
+  background: white;
+  border-radius: 8px;
+  outline: 1px solid #D9D9D9;
+  color: #202224;
+  font-size: 16px;
+  font-family: 'Montserrat arm', sans-serif;
+  font-weight: 400;
+  line-height: 24px;
+  cursor: pointer;
+}
+
+.submitButton {
+  min-width: 150px;
+  min-height: 40px;
+  padding: 8px;
+  background: #0C62FF;
+  border-radius: 8px;
+  color: white;
+  font-size: 16px;
+  font-family: 'Montserrat arm', sans-serif;
+  font-weight: 400;
+  line-height: 24px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.spinIcon {
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}

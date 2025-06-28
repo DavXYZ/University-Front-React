@@ -1,6 +1,6 @@
 import styles from "./SelectReport.module.css";
 import Header from '../common/Header';
-import NavBar from "../common/Navbar";
+import NavBar from "../common/NavBar";
 import Footer from "../common/Footer";
 import LearnMore from "../common/LearnMore";
 import jpg1 from '../assets/high-angle-hand-correcting-grammar-mistakes.jpg'

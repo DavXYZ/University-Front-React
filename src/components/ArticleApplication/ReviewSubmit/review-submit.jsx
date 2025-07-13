@@ -54,8 +54,10 @@ const ReviewSubmit = ({
                           handleRemoveFile,
                           handleClearAll,
                           handleNext,
-                          hasFile
+                          hasFile,
 
+                          handleReviewSubmit,
+                          reviewSubmit
                       }) => {
     return (
         <div className={styles.container}>
@@ -64,9 +66,21 @@ const ReviewSubmit = ({
                 <p className={styles.subtitle}>Վերջնական ստուգում և ներկայացում</p>
             </div>
             <FileUploadForm
-                onPrev={onPrev}
+                onPrev={onPrevFile}
+                handleNext={handleNext}
+                hasFile={hasFile}
+                handleDrag={handleDrag}
+                handleDrop={handleDrop}
+                fileInputRef={fileInputRef}
+                dragActive={dragActive}
+                errors={errors}
+                getFileIcon={getFileIcon}
+                handleFileSelect={handleFileSelect}
+                currentFiles={currentFiles}
+                formatFileSize={formatFileSize}
+                handleRemoveFile={handleRemoveFile}
+                handleClearAll={handleClearAll}/>
 
-            />
             <Formik
                 initialValues={
                     basicInfo || {
@@ -134,23 +148,66 @@ const ReviewSubmit = ({
                     />
                 )}
             </Formik>
-            <FileUploadForm
-                onPrev={onPrevFile}
-                handleNext={handleNext}
-                hasFile={hasFile}
-                handleDrag={handleDrag}
-                handleDrop={handleDrop}
-                fileInputRef={fileInputRef}
-                dragActive={dragActive}
-                errors={errors}
-                getFileIcon={getFileIcon}
-                handleFileSelect={handleFileSelect}
-                currentFiles={currentFiles}
-                formatFileSize={formatFileSize}
-                handleRemoveFile={handleRemoveFile}
-                handleClearAll={handleClearAll}/>
+            <Formik initialValues={{
+                termsAccepted: reviewSubmit.termsAccepted || false,
+                publicationDetails: reviewSubmit.publicationDetails || "",
+            }}
+                    validationSchema={reviewSubmitSchema}
+                    onSubmit={handleReviewSubmit}>
+                {({values, errors, touched, isSubmitting, setFieldValue}) =>
+                    <Form>
+                        <>
+                        <div className={styles.formSection}>
+                            <h2 className={styles.sectionTitle}>Պայմաններ և դրույթներ</h2>
+                            <p className={styles.termsText}>
+                                ԾԱՆՈԹԱԳՐՈՒԹՅՈՒՆ. Դուք չեք փոխանցում հեղինակային իրավունքը որևէ փաստաթղթի, որը տեղադրում
+                                եք SSRN-ում:
+                                Փոխարենը, դուք տրամադրում եք SSRN-ին ոչ-էքսկլյուզիվ իրավունք տեղադրել և տարածել ձեր
+                                աշխատանքը՝ համաձայն
+                                ՀՏՀ-ի «SSRN-ի ապրանքներ և ծառայություններ» բաժնի: Դուք կարող եք ցանկացած պահի հեռացնել
+                                ձեր աշխատանքը
+                                SSRN-ից:
+                            </p>
+                            <div className={styles.termsCheckbox}>
+                                <div className={styles.checkbox}
+                                     onClick={() => setFieldValue("termsAccepted", !values.termsAccepted)}>
+                                    {values.termsAccepted && <Check size={18} className={styles.checkIcon}/>}
+                                </div>
+                                <p className={styles.checkboxLabel}>
+                                    Ես վերանայել եմ բոլոր ֆայլերը, որոնք վերբեռնում եմ, և ունեմ դրանք վերբեռնելու
+                                    իրավունք: Ես կարդացել և
+                                    համաձայն եմ SSRN-ի Պայմաններին և դրույթներին:
+                                </p>
+                            </div>
+                            <ErrorMessage name="termsAccepted" component="div" className={styles.errorMessage}/>
+                        </div>
+
+                        <div className={styles.actionButtons}>
+                            <button type="button" className={styles.prevButton} onClick={onPrev}
+                                    disabled={isSubmitting}>
+                                Նախորդ քայլը
+                            </button>
+                            <button
+                                type="submit"
+                                className={styles.submitButton}
+                                disabled={isSubmitting}
+                            >
+                                {isSubmitting ? (
+                                    <>
+                                        <UploadIcon size={16} className={styles.spinIcon}/>
+                                        Վերբեռնվում և ներկայացվում է...
+                                    </>
+                                ) : (
+                                    "Ներկայացնել"
+                                )}
+                            </button>
+                        </div>
+                        </>
+                    </Form>
+                }
+            </Formik>
         </div>
     )
 }
 
-export default ReviewSubmit
+export default ReviewSubmit;

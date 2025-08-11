@@ -1,0 +1,44 @@
+.stepContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 0px;
+    gap: 16px;
+    width: 872px;
+    height: 90px;
+    flex: none;
+    order: 0;
+    flex-grow: 0;
+}
+
+.stepTitle {
+    width: 100%;
+    height: 39px;
+    font-family: 'Montserrat arm';
+    border-bottom: none;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 26px;
+    line-height: 150%;
+    color: #000000;
+    flex: none;
+    order: 0;
+    align-self: stretch;
+    flex-grow: 0;
+    margin: 0;
+}
+
+.stepDescription {
+    width: 83%;
+    height: 42px;
+    font-family: 'Montserrat arm';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 150%;
+    color: #000000;
+    flex: none;
+    order: 1;
+    flex-grow: 0;
+    margin: 0;
+}

@@ -1,0 +1,121 @@
+/* Base step circle */
+.step {
+  box-sizing: border-box;
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  z-index: 1;
+  font-family: 'Montagu Slab', serif;
+  font-weight: 500;
+  font-size: 13px;
+  line-height: 17px;
+}
+
+/* NEXT step - default */
+.nextStep {
+  background: #FFFFFF;
+  border: 1px solid #919BAC;
+  color: #919BAC;
+}
+
+.nextStepText {
+  color: #919BAC;
+}
+
+/* ACTIVE step */
+.activeStep {
+  background: #FFFFFF;
+  border: 1px solid #0C91D3;
+  color: #0C91D3;
+}
+
+.activeStepText {
+  color: #0C91D3;
+}
+
+/* COMPLETED step */
+.completedStep {
+  background: #0C91D3;
+  border: none;
+  color: #FFFFFF;
+}
+
+.completedStepText {
+  color: #FFFFFF;
+}
+
+/* Other styles you already have */
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 16px;
+  width: 300px;
+  height: auto;
+  background: #F2F2F2;
+  position: relative;
+  padding-bottom: 16px;
+  margin-bottom: auto;
+  align-self: flex-start;
+}
+
+.item {
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  padding: 0 15px;
+  width: calc(100% - 44px);
+  height: 48px;
+  background: #F2F2F2;
+  cursor: default;
+  transition: all 0.2s ease;
+}
+
+.item.clickable {
+  cursor: pointer;
+}
+
+.item.clickable:hover {
+  background: #E5E5E5;
+}
+
+.item.active {
+  border-left: 4px solid #2D2D2D;
+}
+
+.item span {
+  font-family: 'Montserrat arm';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 17px;
+  color: #2D2D2D;
+}
+
+.item .activeText {
+  font-weight: 600;
+}
+
+.stepsContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 40px;
+  position: absolute;
+  width: 24px;
+  right: 20px;
+  top: 14px;
+}
+
+.dashedLine {
+  position: absolute;
+  height: calc(100% - 48px);
+  left: 50%;
+  top: 26px;
+  border-left: 2px dashed #9CA3AF;
+  z-index: 0;
+}

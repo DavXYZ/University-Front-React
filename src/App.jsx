@@ -16,6 +16,7 @@ import ProfileContainer from "./components/profile/ProfileContainer";
 import GoogleProfileCompletionContainer from "./components/auth/GoogleLogin/GoogleProfileCompletion/GoogleProfileCompletionContainer";
 import SelectReport from "./components/SelectReport/SelectReport";
 import ArticleSubmissionPage from "./components/pages/article-submission";
+import FullArticle from "./components/FullArticleDownload/FullArticle.jsx";
 
 function App() {
   return (
@@ -37,6 +38,7 @@ function App() {
       <Route path="/complete-profile" element={<GoogleProfileCompletionContainer />} />
       <Route path="/select-report" element={<SelectReport />} />
       <Route path="/article-application" element={<ArticleSubmissionPage />} />
+      <Route path="/full-article" element={<FullArticle/>}/>
     </Routes>
   );
 }

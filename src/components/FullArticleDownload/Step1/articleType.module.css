@@ -1,0 +1,212 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    padding: 0px;
+    gap: 16px;
+    width: 873px;
+    height: 411px;
+    margin: 16px;
+}
+
+.content {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 0px;
+    gap: 16px;
+    width: 873px;
+    height: 355px;
+    opacity: 0.8;
+}
+
+/* Author Section */
+.authorSection {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 0px;
+    gap: 12px;
+    width: 473px;
+    height: 89px;
+}
+
+.question {
+    width: 473px;
+    height: 21px;
+    font-family: 'Montserrat arm';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 150%;
+    color: #000000;
+}
+
+.radioGroup {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 0px;
+    gap: 8px;
+    width: 299px;
+    height: 56px;
+}
+
+.radioOption {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 0px;
+    gap: 8px;
+    height: 24px;
+}
+
+.radioSelected {
+    width: 24px;
+    height: 24px;
+    border: 1px solid #004DE5;
+    background: #004DE5;
+    color: #FFFFFF;
+    font-size: 20px;
+    border-radius: 50%;
+}
+
+.radioUnselected {
+    width: 24px;
+    height: 24px;
+    border:1px solid #B9BCCB;
+    border-radius: 50%;
+}
+
+.checkmark {
+    font-size: 25px !important;
+    line-height: 1;
+    color: white !important;
+    display: inline-block;
+    position: relative;
+    left: 1px;
+    top: -5px;
+    vertical-align: middle;
+}
+
+.radioOption span {
+    font-family: 'Montserrat arm';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 150%;
+    color: #000000;
+}
+
+/* Article Section */
+.articleSection,
+.contentTypeSection {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 0px;
+    gap: 8px;
+    width: 873px;
+}
+
+.sectionTitle {
+    font-family: 'Montserrat arm';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 150%;
+    color: #191919;
+    margin: 0;
+}
+
+.sectionSubtitle,
+.sectionDescription {
+    font-family: 'Montserrat arm';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 150%;
+    color: #191919;
+    margin: 0;
+}
+
+.dropdown {
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 8px;
+    width: 724px;
+    height: 40px;
+    background: #FFFFFF;
+    border: 1px solid #F3F3F7;
+    border-radius: 8px;
+}
+
+.dropdown span {
+    font-family: 'Montserrat arm';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 150%;
+    color: #808080;
+}
+
+.dropdownArrow {
+    width: 24px;
+    height: 24px;
+}
+
+/* Buttons */
+.buttons {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    padding: 0px;
+    gap: 8px;
+    width: 308px;
+    height: 40px;
+}
+
+.secondaryButton {
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 8px;
+    gap: 8px;
+    width: 150px;
+    height: 40px;
+    background: #FFFFFF;
+    border: 1px solid #9CA3AF;
+    border-radius: 8px;
+    font-family: 'Montserrat arm';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 150%;
+    color: #202224;
+    cursor: pointer;
+}
+
+.primaryButton {
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 8px;
+    gap: 8px;
+    width: 150px;
+    height: 40px;
+    background: #2563EB;
+    border: 1px solid #2563EB;
+    border-radius: 8px;
+    font-family: 'Montserrat arm';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 150%;
+    color: #FFFFFF;
+    cursor: pointer;
+}

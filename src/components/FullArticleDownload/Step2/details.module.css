@@ -1,0 +1,215 @@
+.container {
+    height: 100%;
+    display: inline-flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-end;
+    margin-left: -45px;
+    gap: 32px;
+}
+
+.section {
+    align-self: stretch;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 16px;
+}
+
+.subSection {
+    align-self: stretch;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 8px;
+}
+
+.title {
+    color: black;
+    font-size: 20px;
+    font-family: 'Montserrat arm';
+    font-weight: 400;
+    line-height: 30px;
+    border-bottom: none;
+    word-wrap: break-word;
+    align-self: stretch;
+    margin: 0;
+}
+
+.description {
+    color: black;
+    font-size: 14px;
+    font-family: 'Montserrat arm';
+    font-weight: 400;
+    line-height: 21px;
+    word-wrap: break-word;
+    width: 724px;
+}
+
+.inputContainer {
+    width: 724px;
+    padding: 8px;
+    background: white;
+    border-radius: 8px;
+    outline: 1px solid #f3f3f7;
+    outline-offset: -1px;
+    display: inline-flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.languageBlock {
+    display: flex;
+    flex-direction: column;
+    height: 108px;
+    background: white;
+    overflow: hidden;
+    border-radius: 8px;
+    outline: 1px solid #dddddd;
+    outline-offset: -1px;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+
+.languageTop {
+    width: 812px;
+    height: 50px;
+    padding: 24px 8px;
+    background: #f5f5f5;
+    overflow: hidden;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+    outline: 1px solid #dddddd;
+    outline-offset: -1px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+
+.languageImg {
+    width: 108px;
+    height: 14.13px;
+}
+
+
+.languageInput {
+    min-height: 100px;
+    padding: 8px;
+    outline: none;
+    font-family: inherit;
+    font-size: 14px;
+    color: #000;
+    white-space: pre-wrap; /* keeps line breaks */
+    overflow-y: auto;
+}
+
+.rowFlex {
+    display: inline-flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 24px;
+    width: 100%;
+}
+
+.columnFlex {
+    display: inline-flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 8px;
+}
+
+.smallText {
+    color: black;
+    font-size: 14px;
+    font-family: 'Montserrat arm';
+    font-weight: 400;
+    line-height: 21px;
+    word-wrap: break-word;
+}
+
+.dropdown {
+    padding: 8px;
+    background: white;
+    border-radius: 8px;
+    outline: 1px solid #f3f3f7;
+    outline-offset: -1px;
+    display: inline-flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.dropdownContent {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.dropdownText {
+    display: flex;
+    gap: 25px;
+    color: black;
+    font-size: 14px;
+    font-family: 'Montserrat arm';
+    font-weight: 400;
+    line-height: 21px;
+    word-wrap: break-word;
+}
+
+.keywordsInstruction {
+    width: 724px;
+    color: black;
+    font-size: 14px;
+    font-family: 'Montserrat arm';
+    font-weight: 400;
+    line-height: 21px;
+    word-wrap: break-word;
+}
+
+.keywordsUnderline {
+    text-decoration: underline;
+    font-weight: 400;
+    color: black;
+}
+
+.buttonsRow {
+    display: inline-flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 16px;
+    margin-bottom: 16px;
+}
+
+.button {
+    min-width: 150px;
+    min-height: 40px;
+    padding: 8px 24px;
+    border-radius: 8px;
+    outline-offset: -1px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    font-family: 'Montserrat arm';
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    word-wrap: break-word;
+    cursor: pointer;
+    user-select: none;
+    border: 1px solid transparent;
+}
+
+.buttonPrimary {
+    background: #004de5;
+    border-color: #9ca3af;
+    color: white;
+}
+
+.buttonSecondary {
+    background: white;
+    border-color: #9ca3af;
+    color: #202224;
+}

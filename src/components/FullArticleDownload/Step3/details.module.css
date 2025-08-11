@@ -1,0 +1,241 @@
+.container {
+    height: 100%;
+    padding: 8px 0;
+    background: white;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+    align-items: flex-start;
+}
+
+.headerWrapper {
+    width: 872px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 16px;
+}
+
+.headerContent {
+    width: 872px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+}
+
+.stepTitle {
+    font-size: 26px;
+    font-family: 'Montserrat arm';
+    font-weight: 400;
+    line-height: 39px;
+    color: black;
+}
+
+.sectionSubtitle {
+    width: 724px;
+    font-size: 16px;
+    font-family: 'Montserrat arm';
+    font-weight: 400;
+    line-height: 24px;
+    color: black;
+}
+
+.sectionDescription {
+    width: 724px;
+    font-size: 14px;
+    font-family: 'Montserrat arm';
+    font-weight: 400;
+    line-height: 21px;
+    color: black;
+}
+
+/* Author Card */
+.authorCardWrapper {
+    width: 850px;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+.authorCard {
+    display: inline-flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    height: 136px;
+    padding: 12px 16px;
+    background: white;
+    border: 1px solid #E0E4EB;
+}
+
+.authorCardContent {
+    flex: 1;
+    display: inline-flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.authorName {
+    font-size: 16px;
+    font-family: 'Montserrat arm';
+    font-weight: 400;
+    line-height: 24px;
+    color: black;
+}
+
+.authorDetails {
+    display: inline-flex;
+    justify-content: space-between;
+    width: 100%;
+    padding: 0 72px;
+    font-size: 14px;
+    font-family: 'Montserrat arm';
+    line-height: 21px;
+    color: black;
+}
+
+/* Search Section */
+.searchSectionWrapper {
+    width: 873px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+
+.searchSection {
+    opacity: 0.8;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    width: 100%;
+}
+
+.searchHeader {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.addAuthorTitle {
+    font-size: 20px;
+    font-family: 'Montserrat arm';
+    font-weight: 400;
+    line-height: 30px;
+    color: black;
+}
+
+.searchLabel {
+    width: 724px;
+    font-size: 14px;
+    font-family: 'Montserrat arm';
+    font-weight: 400;
+    line-height: 21px;
+    color: black;
+}
+
+.searchInputs {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.searchBox {
+    width: 724px;
+    padding: 8px;
+    background: white;
+    border-radius: 8px;
+    border: 1px solid #F3F3F7;
+    display: flex;
+    align-items: center;
+}
+
+.searchPlaceholder {
+    color: #808080;
+    font-size: 14px;
+    font-weight: 500;
+    font-family: 'Montserrat arm';
+}
+
+.previousCoauthors {
+    padding: 0 8px;
+    background: white;
+    border-radius: 8px;
+    color: #7B7B7B;
+    font-size: 12px;
+    font-weight: 300;
+    font-family: 'Montserrat arm';
+}
+
+/* Add new author button */
+.addAuthorWrapper {
+    width: 873px;
+}
+
+.addAuthorBtn {
+    height: 40px;
+    padding: 8px;
+    border-radius: 8px;
+    border: 1px solid #0C62FF;
+    color: #0C62FF;
+    font-size: 14px;
+    font-weight: 500;
+    font-family: 'Montserrat arm';
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Footer Buttons */
+.footerButtons {
+    align-self: stretch;
+    display: inline-flex;
+    justify-content: flex-end;
+    gap: 8px;
+}
+
+.btnPrimaryOutline {
+    min-width: 150px;
+    min-height: 40px;
+    padding: 8px;
+    border-radius: 8px;
+    border: 1px solid #9CA3AF;
+    font-size: 16px;
+    font-family: 'Montserrat arm';
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.btnSecondary {
+    min-width: 150px;
+    min-height: 40px;
+    padding: 8px;
+    border-radius: 8px;
+    border: 1px solid #9CA3AF;
+    background: white;
+    font-size: 16px;
+    font-family: 'Montserrat arm';
+    color: #1F1F1F;
+    display: flex;
+    cursor: pointer;
+    justify-content: center;
+    align-items: center;
+}
+
+.btnNext {
+    min-width: 150px;
+    min-height: 40px;
+    padding: 8px;
+    color: white;
+    cursor: pointer;
+    border-radius: 8px;
+    background: #2563EB;
+    border: 1px solid #2563EB;
+    font-size: 16px;
+    font-family: 'Montserrat arm';
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
